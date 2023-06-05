@@ -1,7 +1,4 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- */
+
 package packageimg;
 
 /**
@@ -83,10 +80,6 @@ public class telaLogin extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void loginUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loginUsuarioActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_loginUsuarioActionPerformed
-
     private void senhaUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_senhaUsuarioActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_senhaUsuarioActionPerformed
@@ -98,6 +91,10 @@ public class telaLogin extends javax.swing.JFrame {
     private void jLabel1FocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jLabel1FocusGained
         // TODO add your handling code here:
     }//GEN-LAST:event_jLabel1FocusGained
+
+    private void loginUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loginUsuarioActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_loginUsuarioActionPerformed
 
     /**
      * @param args the command line arguments
