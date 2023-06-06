@@ -40,17 +40,21 @@ public class telaMenu extends javax.swing.JPanel {
         tituloMenu.setText("ESCOLHA UMA DAS OPÇÕES ABAIXO:");
         jPanel1.add(tituloMenu, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 90, 330, 40));
 
+        btConsultar.setBackground(new java.awt.Color(0, 153, 153));
         btConsultar.setText("CONSULTAR");
-        jPanel1.add(btConsultar, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 180, 127, -1));
+        jPanel1.add(btConsultar, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 180, 127, 30));
 
+        btEditar.setBackground(new java.awt.Color(0, 153, 153));
         btEditar.setText("EDITAR CADASTROS");
-        jPanel1.add(btEditar, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 180, -1, -1));
+        jPanel1.add(btEditar, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 180, -1, 30));
 
+        btCadastrar.setBackground(new java.awt.Color(0, 153, 153));
         btCadastrar.setText("NOVO CADASTRO");
-        jPanel1.add(btCadastrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 270, -1, -1));
+        jPanel1.add(btCadastrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 270, -1, 30));
 
+        btExcluir.setBackground(new java.awt.Color(0, 153, 153));
         btExcluir.setText("EXCLUIR REGISTROS");
-        jPanel1.add(btExcluir, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 270, -1, -1));
+        jPanel1.add(btExcluir, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 270, -1, 30));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/tela1.png"))); // NOI18N
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 790, 400));

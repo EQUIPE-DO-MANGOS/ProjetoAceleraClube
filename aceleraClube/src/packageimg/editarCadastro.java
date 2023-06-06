@@ -8,12 +8,12 @@ package packageimg;
  *
  * @author cruze
  */
-public class telaConsulta extends javax.swing.JFrame {
+public class editarCadastro extends javax.swing.JFrame {
 
     /**
-     * Creates new form telaConsulta
+     * Creates new form editarCadastro
      */
-    public telaConsulta() {
+    public editarCadastro() {
         initComponents();
     }
 
@@ -27,57 +27,44 @@ public class telaConsulta extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        digitarCpf = new javax.swing.JTextField();
-        btConsultar = new javax.swing.JButton();
-        btLista = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
+        btEditar = new javax.swing.JButton();
+        btExcluir = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jPanel1.setPreferredSize(new java.awt.Dimension(880, 480));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        digitarCpf.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        digitarCpf.setText("Digite o CPF");
-        digitarCpf.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                digitarCpfActionPerformed(evt);
-            }
-        });
-        jPanel1.add(digitarCpf, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 140, 230, -1));
+        jLabel1.setFont(new java.awt.Font("Segoe UI", 3, 18)); // NOI18N
+        jLabel1.setText("ESCOLHA UMA OPÇÃO:");
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 110, 219, 28));
 
-        btConsultar.setBackground(new java.awt.Color(102, 255, 153));
-        btConsultar.setText("CONSULTAR");
-        jPanel1.add(btConsultar, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 220, 102, 30));
+        btEditar.setBackground(new java.awt.Color(0, 153, 153));
+        btEditar.setText("ATUALIZAR");
+        jPanel1.add(btEditar, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 230, 110, 30));
 
-        btLista.setBackground(new java.awt.Color(0, 153, 153));
-        btLista.setText("RELATÓRIO ASSOCIADOS");
-        jPanel1.add(btLista, new org.netbeans.lib.awtextra.AbsoluteConstraints(322, 270, 170, 30));
+        btExcluir.setBackground(new java.awt.Color(255, 51, 51));
+        btExcluir.setText("EXCLUIR");
+        jPanel1.add(btExcluir, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 230, 110, 30));
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/tela1.png"))); // NOI18N
         jLabel2.setText("jLabel2");
-        jLabel2.setMaximumSize(new java.awt.Dimension(800, 400));
-        jLabel2.setMinimumSize(new java.awt.Dimension(800, 400));
-        jLabel2.setPreferredSize(new java.awt.Dimension(800, 400));
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 800, 400));
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(1, 0, 800, 400));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 802, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 400, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void digitarCpfActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_digitarCpfActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_digitarCpfActionPerformed
 
     /**
      * @param args the command line arguments
@@ -96,28 +83,28 @@ public class telaConsulta extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(telaConsulta.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(editarCadastro.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(telaConsulta.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(editarCadastro.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(telaConsulta.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(editarCadastro.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(telaConsulta.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(editarCadastro.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new telaConsulta().setVisible(true);
+                new editarCadastro().setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btConsultar;
-    private javax.swing.JButton btLista;
-    private javax.swing.JTextField digitarCpf;
+    private javax.swing.JButton btEditar;
+    private javax.swing.JButton btExcluir;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables

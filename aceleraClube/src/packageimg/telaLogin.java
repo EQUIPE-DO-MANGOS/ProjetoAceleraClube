@@ -49,6 +49,7 @@ public class telaLogin extends javax.swing.JFrame {
         });
         jPanel1.add(senhaUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 200, 410, 50));
 
+        btConectar.setBackground(new java.awt.Color(102, 255, 153));
         btConectar.setText("Conectar");
         btConectar.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         btConectar.addActionListener(new java.awt.event.ActionListener() {
