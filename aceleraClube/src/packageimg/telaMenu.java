@@ -37,8 +37,8 @@ public class telaMenu extends javax.swing.JPanel {
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         tituloMenu.setFont(new java.awt.Font("Segoe UI", 3, 18)); // NOI18N
-        tituloMenu.setText("ESCOLHA UMA OPÇÃO");
-        jPanel1.add(tituloMenu, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 100, 200, 40));
+        tituloMenu.setText("ESCOLHA UMA DAS OPÇÕES ABAIXO:");
+        jPanel1.add(tituloMenu, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 90, 330, 40));
 
         btConsultar.setText("CONSULTAR");
         jPanel1.add(btConsultar, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 180, 127, -1));
@@ -52,8 +52,8 @@ public class telaMenu extends javax.swing.JPanel {
         btExcluir.setText("EXCLUIR REGISTROS");
         jPanel1.add(btExcluir, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 270, -1, -1));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/packageimg/Frame (1).png"))); // NOI18N
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 0, 800, 400));
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/tela1.png"))); // NOI18N
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 790, 400));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);

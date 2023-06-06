@@ -59,6 +59,9 @@ public class telaLogin extends javax.swing.JFrame {
         jPanel1.add(btConectar, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 260, 180, 50));
 
         jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\cruze\\Downloads\\Tela de login.png")); // NOI18N
+        jLabel1.setMaximumSize(new java.awt.Dimension(800, 400));
+        jLabel1.setMinimumSize(new java.awt.Dimension(800, 400));
+        jLabel1.setPreferredSize(new java.awt.Dimension(800, 400));
         jLabel1.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusGained(java.awt.event.FocusEvent evt) {
                 jLabel1FocusGained(evt);
