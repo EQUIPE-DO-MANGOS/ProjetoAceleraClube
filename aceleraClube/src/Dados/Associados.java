@@ -69,12 +69,22 @@ public class Associados
     } 
     
     
-    public String getCPF()
+    public String getEmail()
+    {
+        return Email;
+    }
+
+    public void setEmail(String Email)
+    {
+        this.Email = Email;
+    } 
+    
+     public String getCPF()
     {
         return CPF;
     }
 
-    public void setEmail(String CPF)
+    public void setCPF(String CPF)
     {
         this.CPF = CPF;
     } 

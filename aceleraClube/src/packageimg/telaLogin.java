@@ -27,9 +27,10 @@ public class telaLogin extends javax.swing.JFrame {
         loginUsuario = new javax.swing.JTextField();
         senhaUsuario = new javax.swing.JTextField();
         btConectar = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setResizable(false);
 
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -39,7 +40,7 @@ public class telaLogin extends javax.swing.JFrame {
                 loginUsuarioActionPerformed(evt);
             }
         });
-        jPanel1.add(loginUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 150, 410, 50));
+        jPanel1.add(loginUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 170, 320, 40));
 
         senhaUsuario.setText("Senha");
         senhaUsuario.addActionListener(new java.awt.event.ActionListener() {
@@ -47,7 +48,7 @@ public class telaLogin extends javax.swing.JFrame {
                 senhaUsuarioActionPerformed(evt);
             }
         });
-        jPanel1.add(senhaUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 200, 410, 50));
+        jPanel1.add(senhaUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 230, 320, 40));
 
         btConectar.setBackground(new java.awt.Color(102, 255, 153));
         btConectar.setText("Conectar");
@@ -57,28 +58,25 @@ public class telaLogin extends javax.swing.JFrame {
                 btConectarActionPerformed(evt);
             }
         });
-        jPanel1.add(btConectar, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 260, 180, 50));
+        jPanel1.add(btConectar, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 300, 150, 40));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\cruze\\Downloads\\Tela de login.png")); // NOI18N
-        jLabel1.setMaximumSize(new java.awt.Dimension(800, 400));
-        jLabel1.setMinimumSize(new java.awt.Dimension(800, 400));
-        jLabel1.setPreferredSize(new java.awt.Dimension(800, 400));
-        jLabel1.addFocusListener(new java.awt.event.FocusAdapter() {
-            public void focusGained(java.awt.event.FocusEvent evt) {
-                jLabel1FocusGained(evt);
-            }
-        });
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-40, 0, 840, 400));
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/Tela de login.png"))); // NOI18N
+        jLabel2.setText("jLabel2");
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(-40, 0, 930, 400));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 798, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
 
         pack();
@@ -91,10 +89,6 @@ public class telaLogin extends javax.swing.JFrame {
     private void btConectarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btConectarActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_btConectarActionPerformed
-
-    private void jLabel1FocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jLabel1FocusGained
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jLabel1FocusGained
 
     private void loginUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loginUsuarioActionPerformed
         // TODO add your handling code here:
@@ -137,7 +131,7 @@ public class telaLogin extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btConectar;
-    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JTextField loginUsuario;
     private javax.swing.JTextField senhaUsuario;

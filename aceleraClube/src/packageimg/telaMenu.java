@@ -1,14 +1,14 @@
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
+ * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package packageimg;
 
 /**
  *
- * @author cruze
+ * @author Matheus
  */
-public class telaMenu extends javax.swing.JPanel {
+public class telaMenu extends javax.swing.JFrame {
 
     /**
      * Creates new form telaMenu
@@ -28,39 +28,43 @@ public class telaMenu extends javax.swing.JPanel {
 
         jPanel1 = new javax.swing.JPanel();
         tituloMenu = new javax.swing.JLabel();
+        btCadastrar = new javax.swing.JButton();
         btConsultar = new javax.swing.JButton();
         btEditar = new javax.swing.JButton();
-        btCadastrar = new javax.swing.JButton();
         btExcluir = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
+
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setResizable(false);
 
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         tituloMenu.setFont(new java.awt.Font("Segoe UI", 3, 18)); // NOI18N
         tituloMenu.setText("ESCOLHA UMA DAS OPÇÕES ABAIXO:");
-        jPanel1.add(tituloMenu, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 90, 330, 40));
-
-        btConsultar.setBackground(new java.awt.Color(0, 153, 153));
-        btConsultar.setText("CONSULTAR");
-        jPanel1.add(btConsultar, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 180, 127, 30));
-
-        btEditar.setBackground(new java.awt.Color(0, 153, 153));
-        btEditar.setText("EDITAR CADASTROS");
-        jPanel1.add(btEditar, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 180, -1, 30));
+        jPanel1.add(tituloMenu, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 100, -1, -1));
 
         btCadastrar.setBackground(new java.awt.Color(0, 153, 153));
         btCadastrar.setText("NOVO CADASTRO");
-        jPanel1.add(btCadastrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 270, -1, 30));
+        jPanel1.add(btCadastrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 250, -1, 30));
+
+        btConsultar.setBackground(new java.awt.Color(0, 153, 153));
+        btConsultar.setText("CONSULTAR");
+        jPanel1.add(btConsultar, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 180, 127, 30));
+
+        btEditar.setBackground(new java.awt.Color(0, 153, 153));
+        btEditar.setText("EDITAR CADASTROS");
+        jPanel1.add(btEditar, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 180, -1, 30));
 
         btExcluir.setBackground(new java.awt.Color(0, 153, 153));
         btExcluir.setText("EXCLUIR REGISTROS");
-        jPanel1.add(btExcluir, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 270, -1, 30));
+        jPanel1.add(btExcluir, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 250, -1, 30));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/tela1.png"))); // NOI18N
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 790, 400));
+        jLabel1.setText("jLabel1");
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 800, -1));
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
-        this.setLayout(layout);
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+        getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -69,8 +73,44 @@ public class telaMenu extends javax.swing.JPanel {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
+
+        pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String args[]) {
+        /* Set the Nimbus look and feel */
+        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
+        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
+         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
+         */
+        try {
+            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
+                if ("Nimbus".equals(info.getName())) {
+                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
+                    break;
+                }
+            }
+        } catch (ClassNotFoundException ex) {
+            java.util.logging.Logger.getLogger(telaMenu.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (InstantiationException ex) {
+            java.util.logging.Logger.getLogger(telaMenu.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (IllegalAccessException ex) {
+            java.util.logging.Logger.getLogger(telaMenu.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
+            java.util.logging.Logger.getLogger(telaMenu.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        }
+        //</editor-fold>
+
+        /* Create and display the form */
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                new telaMenu().setVisible(true);
+            }
+        });
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btCadastrar;
