@@ -63,7 +63,7 @@ public class telaLogin extends javax.swing.JFrame {
                 btConectarActionPerformed(evt);
             }
         });
-        jPanel1.add(btConectar, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 260, 120, 30));
+        jPanel1.add(btConectar, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 260, 130, 30));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);

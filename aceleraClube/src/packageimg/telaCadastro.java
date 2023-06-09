@@ -62,7 +62,7 @@ public class telaCadastro extends javax.swing.JFrame {
         btProsseguir.setBackground(new java.awt.Color(51, 255, 153));
         btProsseguir.setText("PROSSEGUIR");
         btProsseguir.setContentAreaFilled(false);
-        jPanel1.add(btProsseguir, new org.netbeans.lib.awtextra.AbsoluteConstraints(337, 320, 120, 30));
+        jPanel1.add(btProsseguir, new org.netbeans.lib.awtextra.AbsoluteConstraints(327, 320, 140, 30));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);

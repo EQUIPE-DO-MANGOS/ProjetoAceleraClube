@@ -57,12 +57,12 @@ public class telaConsulta extends javax.swing.JFrame {
         btConsultar.setBackground(new java.awt.Color(102, 255, 153));
         btConsultar.setText("CONSULTAR");
         btConsultar.setContentAreaFilled(false);
-        jPanel1.add(btConsultar, new org.netbeans.lib.awtextra.AbsoluteConstraints(342, 197, 130, -1));
+        jPanel1.add(btConsultar, new org.netbeans.lib.awtextra.AbsoluteConstraints(332, 197, 140, -1));
 
         btLista.setBackground(new java.awt.Color(0, 153, 153));
         btLista.setText("RELATÓRIO ASSOCIADOS");
         btLista.setContentAreaFilled(false);
-        jPanel1.add(btLista, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 250, 120, -1));
+        jPanel1.add(btLista, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 250, 140, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
