@@ -28,11 +28,14 @@ public class atualizarCadastro extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        campoNome = new javax.swing.JTextField();
-        campoCPF = new javax.swing.JTextField();
-        campoData = new javax.swing.JTextField();
-        atualizarTelefone = new javax.swing.JTextField();
-        atualizarEmail = new javax.swing.JTextField();
+        alteraNome = new javax.swing.JTextField();
+        alteraCpf = new javax.swing.JTextField();
+        alteraData = new javax.swing.JTextField();
+        alteraTelefone = new javax.swing.JTextField();
+        alteraEmail = new javax.swing.JTextField();
+        alteraEndereço = new javax.swing.JTextField();
+        alteraCidade = new javax.swing.JTextField();
+        alteraCep = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
         btAtualizar = new javax.swing.JButton();
 
@@ -41,23 +44,32 @@ public class atualizarCadastro extends javax.swing.JFrame {
 
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        campoNome.setText("Nome completo");
-        jPanel1.add(campoNome, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 110, 290, -1));
+        alteraNome.setText("Nome completo");
+        jPanel1.add(alteraNome, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 90, 290, -1));
 
-        campoCPF.setText("CPF");
-        jPanel1.add(campoCPF, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 150, 290, -1));
+        alteraCpf.setText("CPF");
+        jPanel1.add(alteraCpf, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 130, 290, -1));
 
-        campoData.setText("Data de nascimento");
-        jPanel1.add(campoData, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 190, 290, -1));
+        alteraData.setText("Data de nascimento");
+        jPanel1.add(alteraData, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 170, 290, -1));
 
-        atualizarTelefone.setText("Telefone");
-        jPanel1.add(atualizarTelefone, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 230, 290, -1));
+        alteraTelefone.setText("Telefone");
+        jPanel1.add(alteraTelefone, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 210, 290, -1));
 
-        atualizarEmail.setText("E-mail");
-        jPanel1.add(atualizarEmail, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 270, 290, -1));
+        alteraEmail.setText("E-mail");
+        jPanel1.add(alteraEmail, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 250, 290, -1));
+
+        alteraEndereço.setText("Endereço");
+        jPanel1.add(alteraEndereço, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 290, 250, -1));
+
+        alteraCidade.setText("Cidade");
+        jPanel1.add(alteraCidade, new org.netbeans.lib.awtextra.AbsoluteConstraints(451, 290, 100, -1));
+
+        alteraCep.setText("CEP");
+        jPanel1.add(alteraCep, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 290, -1, -1));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/EditarCadastro.png"))); // NOI18N
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-40, 0, 800, 400));
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-40, 0, 830, 400));
 
         btAtualizar.setBackground(new java.awt.Color(51, 255, 153));
         btAtualizar.setText("ATUALIZAR");
@@ -115,12 +127,15 @@ public class atualizarCadastro extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JTextField atualizarEmail;
-    private javax.swing.JTextField atualizarTelefone;
+    private javax.swing.JTextField alteraCep;
+    private javax.swing.JTextField alteraCidade;
+    private javax.swing.JTextField alteraCpf;
+    private javax.swing.JTextField alteraData;
+    private javax.swing.JTextField alteraEmail;
+    private javax.swing.JTextField alteraEndereço;
+    private javax.swing.JTextField alteraNome;
+    private javax.swing.JTextField alteraTelefone;
     private javax.swing.JButton btAtualizar;
-    private javax.swing.JTextField campoCPF;
-    private javax.swing.JTextField campoData;
-    private javax.swing.JTextField campoNome;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables

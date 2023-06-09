@@ -32,6 +32,9 @@ public class telaCadastro extends javax.swing.JFrame {
         campoData = new javax.swing.JTextField();
         campoTelefone = new javax.swing.JTextField();
         campoEmail = new javax.swing.JTextField();
+        campoEndereço = new javax.swing.JTextField();
+        campoCidade = new javax.swing.JTextField();
+        campoCep = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
         btProsseguir = new javax.swing.JButton();
 
@@ -54,6 +57,15 @@ public class telaCadastro extends javax.swing.JFrame {
 
         campoEmail.setText("E-mail");
         jPanel1.add(campoEmail, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 260, 310, -1));
+
+        campoEndereço.setText("Endereço");
+        jPanel1.add(campoEndereço, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 290, 250, -1));
+
+        campoCidade.setText("Cidade");
+        jPanel1.add(campoCidade, new org.netbeans.lib.awtextra.AbsoluteConstraints(451, 290, 100, -1));
+
+        campoCep.setText("CEP");
+        jPanel1.add(campoCep, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 290, -1, -1));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/CadastrarCliente.png"))); // NOI18N
         jLabel1.setText("jLabel1");
@@ -116,8 +128,11 @@ public class telaCadastro extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btProsseguir;
     private javax.swing.JTextField campoCPF;
+    private javax.swing.JTextField campoCep;
+    private javax.swing.JTextField campoCidade;
     private javax.swing.JTextField campoData;
     private javax.swing.JTextField campoEmail;
+    private javax.swing.JTextField campoEndereço;
     private javax.swing.JTextField campoNome;
     private javax.swing.JTextField campoTelefone;
     private javax.swing.JLabel jLabel1;
