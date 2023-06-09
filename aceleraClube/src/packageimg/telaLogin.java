@@ -1,17 +1,16 @@
 
 package packageimg;
 
-/**
- *
- * @author cruze
- */
+import Banco.acessarBanco;
+import Dados.Login;
+import javax.swing.JOptionPane;
+
 public class telaLogin extends javax.swing.JFrame {
 
-    /**
-     * Creates new form telaLogin
-     */
+    private telaMenu tm;
     public telaLogin() {
         initComponents();
+        tm = new telaMenu();
     }
 
     /**
@@ -52,10 +51,9 @@ public class telaLogin extends javax.swing.JFrame {
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/TelaDeLogin.png"))); // NOI18N
         jLabel2.setText("jLabel2");
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(-90, 0, 930, 400));
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(-80, 0, 930, 400));
 
         btConectar.setBackground(new java.awt.Color(102, 255, 153));
-        btConectar.setText("Conectar");
         btConectar.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         btConectar.setContentAreaFilled(false);
         btConectar.addActionListener(new java.awt.event.ActionListener() {
@@ -63,7 +61,7 @@ public class telaLogin extends javax.swing.JFrame {
                 btConectarActionPerformed(evt);
             }
         });
-        jPanel1.add(btConectar, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 260, 130, 30));
+        jPanel1.add(btConectar, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 260, 130, 30));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -88,7 +86,29 @@ public class telaLogin extends javax.swing.JFrame {
     }//GEN-LAST:event_senhaUsuarioActionPerformed
 
     private void btConectarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btConectarActionPerformed
-        // TODO add your handling code here:
+  String Usuario;
+	String Senha;
+				
+	acessarBanco acessar = new acessarBanco();
+	Login login = new Login();
+				
+	Usuario = loginUsuario.getText();
+	Senha = senhaUsuario.getText();
+				
+	login.setUsuario(Usuario);
+	login.setSenha(Senha);
+				
+	if(acessar.verificaAcesso(login) == true)
+	{
+            tm.setVisible(true);
+            dispose();
+	}
+	else
+	{
+            JOptionPane.showMessageDialog(null, "Erro nos dados informados", "Erro", JOptionPane.ERROR_MESSAGE);
+	}
+           
+
     }//GEN-LAST:event_btConectarActionPerformed
 
     private void loginUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loginUsuarioActionPerformed

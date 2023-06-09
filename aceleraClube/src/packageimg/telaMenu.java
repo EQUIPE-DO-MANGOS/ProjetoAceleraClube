@@ -10,11 +10,17 @@ package packageimg;
  */
 public class telaMenu extends javax.swing.JFrame {
 
-    /**
-     * Creates new form telaMenu
-     */
+   private telaConsulta consultar;
+   private atualizarCadastro editar;
+   private telaCadastro cadastrar;
+   private excluirCadastro excluir;
+           
     public telaMenu() {
         initComponents();
+        consultar = new telaConsulta();
+        editar = new atualizarCadastro();
+        cadastrar = new telaCadastro();
+        excluir = new excluirCadastro();
     }
 
     /**
@@ -44,21 +50,41 @@ public class telaMenu extends javax.swing.JFrame {
 
         btEditar.setBackground(new java.awt.Color(0, 153, 153));
         btEditar.setContentAreaFilled(false);
+        btEditar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btEditarActionPerformed(evt);
+            }
+        });
         jPanel1.add(btEditar, new org.netbeans.lib.awtextra.AbsoluteConstraints(437, 170, 120, 20));
 
         btExcluir.setBackground(new java.awt.Color(0, 153, 153));
         btExcluir.setText("EXCLUIR REGISTROS");
         btExcluir.setContentAreaFilled(false);
+        btExcluir.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btExcluirActionPerformed(evt);
+            }
+        });
         jPanel1.add(btExcluir, new org.netbeans.lib.awtextra.AbsoluteConstraints(436, 240, 120, -1));
 
         btCadastrar.setBackground(new java.awt.Color(0, 153, 153));
         btCadastrar.setText("NOVO CADASTRO");
         btCadastrar.setContentAreaFilled(false);
+        btCadastrar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btCadastrarActionPerformed(evt);
+            }
+        });
         jPanel1.add(btCadastrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 240, 120, 20));
 
         btConsultar.setBackground(new java.awt.Color(0, 153, 153));
         btConsultar.setText("CONSULTAR");
         btConsultar.setContentAreaFilled(false);
+        btConsultar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btConsultarActionPerformed(evt);
+            }
+        });
         jPanel1.add(btConsultar, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 170, 120, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -77,6 +103,26 @@ public class telaMenu extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btConsultarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btConsultarActionPerformed
+        // TODO add your handling code here:
+        consultar.setVisible(true);
+    }//GEN-LAST:event_btConsultarActionPerformed
+
+    private void btEditarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btEditarActionPerformed
+        // TODO add your handling code here:
+        editar.setVisible(true);
+    }//GEN-LAST:event_btEditarActionPerformed
+
+    private void btCadastrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btCadastrarActionPerformed
+        // TODO add your handling code here:
+        cadastrar.setVisible(true);
+    }//GEN-LAST:event_btCadastrarActionPerformed
+
+    private void btExcluirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btExcluirActionPerformed
+        // TODO add your handling code here:
+        excluir.setVisible(true);
+    }//GEN-LAST:event_btExcluirActionPerformed
 
     /**
      * @param args the command line arguments
