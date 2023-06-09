@@ -52,7 +52,7 @@ public class telaConsulta extends javax.swing.JFrame {
         jLabel2.setMaximumSize(new java.awt.Dimension(800, 400));
         jLabel2.setMinimumSize(new java.awt.Dimension(800, 400));
         jLabel2.setPreferredSize(new java.awt.Dimension(800, 400));
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(-40, 0, 840, 400));
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(-40, 0, 830, 400));
 
         btConsultar.setBackground(new java.awt.Color(102, 255, 153));
         btConsultar.setText("CONSULTAR");
@@ -68,7 +68,7 @@ public class telaConsulta extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 802, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 790, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)

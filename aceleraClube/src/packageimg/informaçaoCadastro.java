@@ -38,7 +38,7 @@ public class informaçaoCadastro extends javax.swing.JFrame {
         jLabel1.setText("jLabel1");
         jLabel1.setMaximumSize(new java.awt.Dimension(840, 400));
         jLabel1.setMinimumSize(new java.awt.Dimension(840, 400));
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-40, -70, 840, 550));
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-40, 0, 830, 400));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents

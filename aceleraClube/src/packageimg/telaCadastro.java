@@ -69,7 +69,7 @@ public class telaCadastro extends javax.swing.JFrame {
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/CadastrarCliente.png"))); // NOI18N
         jLabel1.setText("jLabel1");
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-40, 0, 840, 400));
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-40, 0, 830, 400));
 
         btProsseguir.setBackground(new java.awt.Color(51, 255, 153));
         btProsseguir.setText("PROSSEGUIR");
