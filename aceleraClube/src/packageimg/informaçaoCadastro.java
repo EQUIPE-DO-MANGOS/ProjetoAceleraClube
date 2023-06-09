@@ -26,24 +26,19 @@ public class informaçaoCadastro extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        tituloCadastro = new javax.swing.JLabel();
         informaçoesCadastro = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        getContentPane().add(informaçoesCadastro, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 110, 431, 220));
 
-        tituloCadastro.setFont(new java.awt.Font("Segoe UI", 3, 18)); // NOI18N
-        tituloCadastro.setText("INFORMAÇÕES DO CADASTRO");
-        getContentPane().add(tituloCadastro, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 70, -1, 33));
-        getContentPane().add(informaçoesCadastro, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 120, 431, 189));
-
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/tela1.png"))); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/ConsultaIndividual.png"))); // NOI18N
         jLabel1.setText("jLabel1");
         jLabel1.setMaximumSize(new java.awt.Dimension(840, 400));
         jLabel1.setMinimumSize(new java.awt.Dimension(840, 400));
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 800, -1));
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-40, -70, 840, 550));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -86,6 +81,5 @@ public class informaçaoCadastro extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextField informaçoesCadastro;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel tituloCadastro;
     // End of variables declaration//GEN-END:variables
 }

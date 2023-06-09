@@ -27,51 +27,52 @@ public class telaMenu extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        tituloMenu = new javax.swing.JLabel();
-        btCadastrar = new javax.swing.JButton();
-        btConsultar = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
         btEditar = new javax.swing.JButton();
         btExcluir = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
+        btCadastrar = new javax.swing.JButton();
+        btConsultar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
 
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        tituloMenu.setFont(new java.awt.Font("Segoe UI", 3, 18)); // NOI18N
-        tituloMenu.setText("ESCOLHA UMA DAS OPÇÕES ABAIXO:");
-        jPanel1.add(tituloMenu, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 100, -1, -1));
-
-        btCadastrar.setBackground(new java.awt.Color(0, 153, 153));
-        btCadastrar.setText("NOVO CADASTRO");
-        jPanel1.add(btCadastrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 250, -1, 30));
-
-        btConsultar.setBackground(new java.awt.Color(0, 153, 153));
-        btConsultar.setText("CONSULTAR");
-        jPanel1.add(btConsultar, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 180, 127, 30));
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/Opcoes.png"))); // NOI18N
+        jLabel1.setText("jLabel1");
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-40, 0, 840, 400));
 
         btEditar.setBackground(new java.awt.Color(0, 153, 153));
-        btEditar.setText("EDITAR CADASTROS");
-        jPanel1.add(btEditar, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 180, -1, 30));
+        btEditar.setContentAreaFilled(false);
+        jPanel1.add(btEditar, new org.netbeans.lib.awtextra.AbsoluteConstraints(437, 170, 120, 20));
 
         btExcluir.setBackground(new java.awt.Color(0, 153, 153));
         btExcluir.setText("EXCLUIR REGISTROS");
-        jPanel1.add(btExcluir, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 250, -1, 30));
+        btExcluir.setContentAreaFilled(false);
+        jPanel1.add(btExcluir, new org.netbeans.lib.awtextra.AbsoluteConstraints(436, 240, 120, -1));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/tela1.png"))); // NOI18N
-        jLabel1.setText("jLabel1");
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 800, -1));
+        btCadastrar.setBackground(new java.awt.Color(0, 153, 153));
+        btCadastrar.setText("NOVO CADASTRO");
+        btCadastrar.setContentAreaFilled(false);
+        jPanel1.add(btCadastrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 240, 120, 20));
+
+        btConsultar.setBackground(new java.awt.Color(0, 153, 153));
+        btConsultar.setText("CONSULTAR");
+        btConsultar.setContentAreaFilled(false);
+        jPanel1.add(btConsultar, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 170, 120, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 792, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
         );
 
         pack();
@@ -119,6 +120,5 @@ public class telaMenu extends javax.swing.JFrame {
     private javax.swing.JButton btExcluir;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JLabel tituloMenu;
     // End of variables declaration//GEN-END:variables
 }

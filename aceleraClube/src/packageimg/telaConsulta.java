@@ -28,9 +28,9 @@ public class telaConsulta extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         digitarCpf = new javax.swing.JTextField();
+        jLabel2 = new javax.swing.JLabel();
         btConsultar = new javax.swing.JButton();
         btLista = new javax.swing.JButton();
-        jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
@@ -45,22 +45,24 @@ public class telaConsulta extends javax.swing.JFrame {
                 digitarCpfActionPerformed(evt);
             }
         });
-        jPanel1.add(digitarCpf, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 140, 230, -1));
+        jPanel1.add(digitarCpf, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 132, 260, 30));
 
-        btConsultar.setBackground(new java.awt.Color(102, 255, 153));
-        btConsultar.setText("CONSULTAR");
-        jPanel1.add(btConsultar, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 220, 102, 30));
-
-        btLista.setBackground(new java.awt.Color(0, 153, 153));
-        btLista.setText("RELATÓRIO ASSOCIADOS");
-        jPanel1.add(btLista, new org.netbeans.lib.awtextra.AbsoluteConstraints(322, 270, 170, 30));
-
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/tela1.png"))); // NOI18N
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/Consulta.png"))); // NOI18N
         jLabel2.setText("jLabel2");
         jLabel2.setMaximumSize(new java.awt.Dimension(800, 400));
         jLabel2.setMinimumSize(new java.awt.Dimension(800, 400));
         jLabel2.setPreferredSize(new java.awt.Dimension(800, 400));
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 800, 400));
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(-40, 0, 840, 400));
+
+        btConsultar.setBackground(new java.awt.Color(102, 255, 153));
+        btConsultar.setText("CONSULTAR");
+        btConsultar.setContentAreaFilled(false);
+        jPanel1.add(btConsultar, new org.netbeans.lib.awtextra.AbsoluteConstraints(342, 197, 130, -1));
+
+        btLista.setBackground(new java.awt.Color(0, 153, 153));
+        btLista.setText("RELATÓRIO ASSOCIADOS");
+        btLista.setContentAreaFilled(false);
+        jPanel1.add(btLista, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 250, 120, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);

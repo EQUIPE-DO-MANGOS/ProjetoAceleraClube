@@ -26,21 +26,16 @@ public class listaAssociados extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        tituloAssociados = new javax.swing.JLabel();
         informaçoesAssociados = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        getContentPane().add(informaçoesAssociados, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 90, 480, 240));
 
-        tituloAssociados.setFont(new java.awt.Font("Segoe UI", 3, 18)); // NOI18N
-        tituloAssociados.setText("LISTA DE ASSOCIADOS");
-        getContentPane().add(tituloAssociados, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 80, -1, -1));
-        getContentPane().add(informaçoesAssociados, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 120, 450, 190));
-
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/tela1.png"))); // NOI18N
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/ListaAssociados.png"))); // NOI18N
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-40, -40, -1, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -83,6 +78,5 @@ public class listaAssociados extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextField informaçoesAssociados;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel tituloAssociados;
     // End of variables declaration//GEN-END:variables
 }

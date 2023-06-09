@@ -26,8 +26,8 @@ public class telaLogin extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         loginUsuario = new javax.swing.JTextField();
         senhaUsuario = new javax.swing.JTextField();
-        btConectar = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
+        btConectar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
@@ -40,7 +40,7 @@ public class telaLogin extends javax.swing.JFrame {
                 loginUsuarioActionPerformed(evt);
             }
         });
-        jPanel1.add(loginUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 170, 320, 40));
+        jPanel1.add(loginUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 150, 320, 40));
 
         senhaUsuario.setText("Senha");
         senhaUsuario.addActionListener(new java.awt.event.ActionListener() {
@@ -48,21 +48,22 @@ public class telaLogin extends javax.swing.JFrame {
                 senhaUsuarioActionPerformed(evt);
             }
         });
-        jPanel1.add(senhaUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 230, 320, 40));
+        jPanel1.add(senhaUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 200, 320, 40));
+
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/TelaDeLogin.png"))); // NOI18N
+        jLabel2.setText("jLabel2");
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(-90, 0, 930, 400));
 
         btConectar.setBackground(new java.awt.Color(102, 255, 153));
         btConectar.setText("Conectar");
         btConectar.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        btConectar.setContentAreaFilled(false);
         btConectar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btConectarActionPerformed(evt);
             }
         });
-        jPanel1.add(btConectar, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 300, 150, 40));
-
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/Tela de login.png"))); // NOI18N
-        jLabel2.setText("jLabel2");
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(-40, 0, 930, 400));
+        jPanel1.add(btConectar, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 260, 120, 30));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);

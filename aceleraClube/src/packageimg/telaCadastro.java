@@ -32,8 +32,8 @@ public class telaCadastro extends javax.swing.JFrame {
         campoData = new javax.swing.JTextField();
         campoTelefone = new javax.swing.JTextField();
         campoEmail = new javax.swing.JTextField();
-        btProsseguir = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
+        btProsseguir = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
@@ -41,27 +41,28 @@ public class telaCadastro extends javax.swing.JFrame {
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         campoNome.setText("Nome completo");
-        jPanel1.add(campoNome, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 80, 285, -1));
+        jPanel1.add(campoNome, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 100, 310, -1));
 
         campoCPF.setText("CPF");
-        jPanel1.add(campoCPF, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 120, 285, -1));
+        jPanel1.add(campoCPF, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 140, 310, -1));
 
         campoData.setText("Data de nascimento");
-        jPanel1.add(campoData, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 160, 285, -1));
+        jPanel1.add(campoData, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 180, 310, -1));
 
         campoTelefone.setText("Telefone");
-        jPanel1.add(campoTelefone, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 200, 285, -1));
+        jPanel1.add(campoTelefone, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 220, 310, -1));
 
         campoEmail.setText("E-mail");
-        jPanel1.add(campoEmail, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 240, 285, -1));
+        jPanel1.add(campoEmail, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 260, 310, -1));
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/CadastrarCliente.png"))); // NOI18N
+        jLabel1.setText("jLabel1");
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-40, 0, 840, 400));
 
         btProsseguir.setBackground(new java.awt.Color(51, 255, 153));
         btProsseguir.setText("PROSSEGUIR");
-        jPanel1.add(btProsseguir, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 300, -1, 30));
-
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/tela1.png"))); // NOI18N
-        jLabel1.setText("jLabel1");
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 800, 400));
+        btProsseguir.setContentAreaFilled(false);
+        jPanel1.add(btProsseguir, new org.netbeans.lib.awtextra.AbsoluteConstraints(337, 320, 120, 30));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);

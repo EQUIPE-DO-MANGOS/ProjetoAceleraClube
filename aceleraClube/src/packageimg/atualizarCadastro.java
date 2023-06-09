@@ -33,8 +33,8 @@ public class atualizarCadastro extends javax.swing.JFrame {
         campoData = new javax.swing.JTextField();
         atualizarTelefone = new javax.swing.JTextField();
         atualizarEmail = new javax.swing.JTextField();
-        btProsseguir = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
+        btProsseguir = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
@@ -42,26 +42,27 @@ public class atualizarCadastro extends javax.swing.JFrame {
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         campoNome.setText("Nome completo");
-        jPanel1.add(campoNome, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 80, 285, -1));
+        jPanel1.add(campoNome, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 110, 290, -1));
 
         campoCPF.setText("CPF");
-        jPanel1.add(campoCPF, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 120, 285, -1));
+        jPanel1.add(campoCPF, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 150, 290, -1));
 
         campoData.setText("Data de nascimento");
-        jPanel1.add(campoData, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 160, 285, -1));
+        jPanel1.add(campoData, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 190, 290, -1));
 
         atualizarTelefone.setText("Telefone");
-        jPanel1.add(atualizarTelefone, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 200, 285, -1));
+        jPanel1.add(atualizarTelefone, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 230, 290, -1));
 
         atualizarEmail.setText("E-mail");
-        jPanel1.add(atualizarEmail, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 240, 285, -1));
+        jPanel1.add(atualizarEmail, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 270, 290, -1));
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/EditarCadastro.png"))); // NOI18N
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-40, 0, 800, 400));
 
         btProsseguir.setBackground(new java.awt.Color(51, 255, 153));
         btProsseguir.setText("ATUALIZAR");
-        jPanel1.add(btProsseguir, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 300, -1, 30));
-
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/tela1.png"))); // NOI18N
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 800, 400));
+        btProsseguir.setContentAreaFilled(false);
+        jPanel1.add(btProsseguir, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 320, 120, 30));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
