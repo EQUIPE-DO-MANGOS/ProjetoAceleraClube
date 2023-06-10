@@ -27,7 +27,7 @@ public class associadosBanco {
         {
             stmt = connection.createStatement();
 
-            String sql = "INSERT INTO dados(Nome,Endereco,Telefone,Email,CPF,CEP,Nascimento,Cidade) "
+            String sql = "INSERT INTO associados(Nome,Endereco,Telefone,Email,CPF,CEP,Nascimento,Cidade) "
             		   + "VALUES ('"+ associados.getNome() + "','" + associados.getEndereco() + "', '" 
             		   + associados.getTelefone() + "', '" + associados.getEmail() + "','" + associados.getCPF() + "','" + associados.getCEP() + "','" + associados.getNascimento() + "','" + associados.getCidade() + "')";
             System.out.println("SQL: " + sql);
@@ -68,11 +68,11 @@ public boolean atualizarAssociado(Associados associados, String CPFAlterar)
         {
             stmt = connection.createStatement();
             
-            String sql = "UPDATE dados SET nome='"+associados.getNome()+"'," +
+            String sql = "UPDATE associados SET cpf='"+associados.getCPF()+"'," +
                          "endereco='"+associados.getEndereco()+"', telefone='"+associados.getTelefone()+"'," +
-                         "email='"+associados.getEmail()+"', cpf='"+associados.getCPF()+"'," +
+                         "email='"+associados.getEmail()+"', nome='"+associados.getNome()+"'," +
                          "cep='"+associados.getCEP()+"', nascimento='"+associados.getNascimento()+"',"+
-                         "cidade='"+associados.getCidade()+"' WHERE nome='"+CPFAlterar+"';";
+                         "cidade='"+associados.getCidade()+"' WHERE cpf='"+CPFAlterar+"';";
                     
             System.out.println("SQL: " + sql);
             stmt.executeUpdate(sql);
@@ -110,7 +110,7 @@ public boolean atualizarAssociado(Associados associados, String CPFAlterar)
         try
         {
             stmt = connection.createStatement();
-            ResultSet res = stmt.executeQuery("SELECT * FROM dados");
+            ResultSet res = stmt.executeQuery("SELECT * FROM associados");
             
             while (res.next())
             {
@@ -159,7 +159,7 @@ public boolean atualizarAssociado(Associados associados, String CPFAlterar)
         try
         {
             stmt = connection.createStatement();
-            ResultSet res = stmt.executeQuery("SELECT * FROM dados");
+            ResultSet res = stmt.executeQuery("SELECT * FROM associados");
             
             while (res.next())
             {
@@ -207,7 +207,7 @@ public boolean atualizarAssociado(Associados associados, String CPFAlterar)
         {
             stmt = connection.createStatement();
             
-            String sql = "DELETE FROM dados WHERE CPF='"+associados.getCPF()+"'";
+            String sql = "DELETE FROM associados WHERE CPF='"+associados.getCPF()+"'";
             
             System.out.println("SQL: " + sql);
             

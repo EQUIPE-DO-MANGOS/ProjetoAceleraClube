@@ -4,15 +4,14 @@
  */
 package packageimg;
 
-/**
- *
- * @author cruze
- */
+import Banco.associadosBanco;
+import Dados.Associados;
+import javax.swing.JOptionPane;
+
 public class telaCadastro extends javax.swing.JFrame {
 
-    /**
-     * Creates new form telaCadastro
-     */
+    private String Nome, Endereco, Telefone, Email, CPF, CEP, Nascimento, Cidade;
+            
     public telaCadastro() {
         initComponents();
     }
@@ -37,6 +36,7 @@ public class telaCadastro extends javax.swing.JFrame {
         campoCep = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
         btProsseguir = new javax.swing.JButton();
+        btVoltar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
@@ -74,7 +74,20 @@ public class telaCadastro extends javax.swing.JFrame {
         btProsseguir.setBackground(new java.awt.Color(51, 255, 153));
         btProsseguir.setText("PROSSEGUIR");
         btProsseguir.setContentAreaFilled(false);
+        btProsseguir.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btProsseguirActionPerformed(evt);
+            }
+        });
         jPanel1.add(btProsseguir, new org.netbeans.lib.awtextra.AbsoluteConstraints(327, 320, 140, 30));
+
+        btVoltar.setText("jButton2");
+        btVoltar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btVoltarActionPerformed(evt);
+            }
+        });
+        jPanel1.add(btVoltar, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 20, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -89,6 +102,45 @@ public class telaCadastro extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btProsseguirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btProsseguirActionPerformed
+        
+        Associados associados = new Associados();
+	associadosBanco associadosbanco = new associadosBanco();
+				
+	Nome = campoNome.getText();
+	Endereco = campoEndereço.getText();
+	Telefone = campoTelefone.getText();
+	Email = campoEmail.getText();
+        CPF = campoCPF.getText();
+        CEP = campoCep.getText();
+        Nascimento = campoData.getText();
+        Cidade = campoCidade.getText();
+        
+        associados.setNome(Nome);
+	associados.setEndereco(Endereco);
+	associados.setTelefone(Telefone);
+	associados.setEmail(Email);
+        associados.setCPF(CPF);
+        associados.setCEP(CEP);
+        associados.setNascimento(Nascimento);
+        associados.setCidade(Cidade);
+        
+        if(associadosbanco.inserirAssociado(associados) == true)
+	{
+		JOptionPane.showMessageDialog(null, "Pessoa cadastrada com sucesso!!!", "Cadastro",JOptionPane.INFORMATION_MESSAGE);
+	}
+	else
+	{
+		JOptionPane.showMessageDialog(null, "Erro no cadastro", "Erro",JOptionPane.ERROR_MESSAGE);
+	}
+        
+    }//GEN-LAST:event_btProsseguirActionPerformed
+
+    private void btVoltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btVoltarActionPerformed
+        new telaMenu().show();
+        dispose();
+    }//GEN-LAST:event_btVoltarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -127,6 +179,7 @@ public class telaCadastro extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btProsseguir;
+    private javax.swing.JButton btVoltar;
     private javax.swing.JTextField campoCPF;
     private javax.swing.JTextField campoCep;
     private javax.swing.JTextField campoCidade;

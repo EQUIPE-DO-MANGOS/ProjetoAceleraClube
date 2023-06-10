@@ -111,12 +111,12 @@ public class telaMenu extends javax.swing.JFrame {
 
     private void btEditarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btEditarActionPerformed
         // TODO add your handling code here:
-        editar.setVisible(true);
+        cadastrar.setVisible(true);
     }//GEN-LAST:event_btEditarActionPerformed
 
     private void btCadastrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btCadastrarActionPerformed
         // TODO add your handling code here:
-        cadastrar.setVisible(true);
+        editar.setVisible(true);
     }//GEN-LAST:event_btCadastrarActionPerformed
 
     private void btExcluirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btExcluirActionPerformed
