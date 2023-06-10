@@ -33,7 +33,7 @@ public class telaMenu extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
         btEditar = new javax.swing.JButton();
         btExcluir = new javax.swing.JButton();
         btCadastrar = new javax.swing.JButton();
@@ -42,11 +42,12 @@ public class telaMenu extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
 
+        jPanel1.setPreferredSize(new java.awt.Dimension(800, 395));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/Opcoes.png"))); // NOI18N
-        jLabel1.setText("jLabel1");
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-40, 0, 840, 400));
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/Opcoes.png"))); // NOI18N
+        jLabel2.setPreferredSize(new java.awt.Dimension(790, 395));
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(-40, 0, 830, 400));
 
         btEditar.setBackground(new java.awt.Color(0, 153, 153));
         btEditar.setContentAreaFilled(false);
@@ -91,14 +92,11 @@ public class telaMenu extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 792, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 790, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 400, Short.MAX_VALUE)
         );
 
         pack();
@@ -109,11 +107,14 @@ public class telaMenu extends javax.swing.JFrame {
         consultar.setVisible(true);
     }//GEN-LAST:event_btConsultarActionPerformed
 
+<<<<<<< HEAD
     private void btEditarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btEditarActionPerformed
         // TODO add your handling code here:
         cadastrar.setVisible(true);
     }//GEN-LAST:event_btEditarActionPerformed
 
+=======
+>>>>>>> f8c49cd1ed352ca14231fa599c8b92449262bdf5
     private void btCadastrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btCadastrarActionPerformed
         // TODO add your handling code here:
         editar.setVisible(true);
@@ -123,6 +124,11 @@ public class telaMenu extends javax.swing.JFrame {
         // TODO add your handling code here:
         excluir.setVisible(true);
     }//GEN-LAST:event_btExcluirActionPerformed
+
+    private void btEditarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btEditarActionPerformed
+        // TODO add your handling code here:
+        editar.setVisible(true);
+    }//GEN-LAST:event_btEditarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -164,7 +170,7 @@ public class telaMenu extends javax.swing.JFrame {
     private javax.swing.JButton btConsultar;
     private javax.swing.JButton btEditar;
     private javax.swing.JButton btExcluir;
-    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
 }

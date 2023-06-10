@@ -35,7 +35,7 @@ public class listaAssociados extends javax.swing.JFrame {
         getContentPane().add(informaçoesAssociados, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 90, 480, 240));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/ListaAssociados.png"))); // NOI18N
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-40, -40, -1, -1));
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-40, 0, 830, 400));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
