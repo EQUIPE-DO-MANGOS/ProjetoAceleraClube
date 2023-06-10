@@ -35,41 +35,45 @@ public class telaCadastro extends javax.swing.JFrame {
         campoCidade = new javax.swing.JTextField();
         campoCep = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
-        btProsseguir = new javax.swing.JButton();
         btVoltar = new javax.swing.JButton();
+        btProsseguir = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
 
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        campoNome.setText("Nome completo");
-        jPanel1.add(campoNome, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 100, 310, -1));
+        campoNome.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                campoNomeActionPerformed(evt);
+            }
+        });
+        jPanel1.add(campoNome, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 130, 310, -1));
 
-        campoCPF.setText("CPF");
-        jPanel1.add(campoCPF, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 140, 310, -1));
+        campoCPF.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                campoCPFActionPerformed(evt);
+            }
+        });
+        jPanel1.add(campoCPF, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 90, 310, -1));
+        jPanel1.add(campoData, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 170, 130, -1));
+        jPanel1.add(campoTelefone, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 170, 170, -1));
+        jPanel1.add(campoEmail, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 210, 310, -1));
+        jPanel1.add(campoEndereço, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 250, 310, -1));
+        jPanel1.add(campoCidade, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 290, 190, -1));
+        jPanel1.add(campoCep, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 290, 100, -1));
 
-        campoData.setText("Data de nascimento");
-        jPanel1.add(campoData, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 180, 310, -1));
-
-        campoTelefone.setText("Telefone");
-        jPanel1.add(campoTelefone, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 220, 310, -1));
-
-        campoEmail.setText("E-mail");
-        jPanel1.add(campoEmail, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 260, 310, -1));
-
-        campoEndereço.setText("Endereço");
-        jPanel1.add(campoEndereço, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 290, 250, -1));
-
-        campoCidade.setText("Cidade");
-        jPanel1.add(campoCidade, new org.netbeans.lib.awtextra.AbsoluteConstraints(451, 290, 100, -1));
-
-        campoCep.setText("CEP");
-        jPanel1.add(campoCep, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 290, -1, -1));
-
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/CadastrarCliente.png"))); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/Cadastro.png"))); // NOI18N
         jLabel1.setText("jLabel1");
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-40, 0, 830, 400));
+
+        btVoltar.setText("jButton2");
+        btVoltar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btVoltarActionPerformed(evt);
+            }
+        });
+        jPanel1.add(btVoltar, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 340, 50, 40));
 
         btProsseguir.setBackground(new java.awt.Color(51, 255, 153));
         btProsseguir.setText("PROSSEGUIR");
@@ -80,14 +84,6 @@ public class telaCadastro extends javax.swing.JFrame {
             }
         });
         jPanel1.add(btProsseguir, new org.netbeans.lib.awtextra.AbsoluteConstraints(327, 320, 140, 30));
-
-        btVoltar.setText("jButton2");
-        btVoltar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btVoltarActionPerformed(evt);
-            }
-        });
-        jPanel1.add(btVoltar, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 20, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -141,6 +137,14 @@ public class telaCadastro extends javax.swing.JFrame {
         new telaMenu().show();
         dispose();
     }//GEN-LAST:event_btVoltarActionPerformed
+
+    private void campoCPFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_campoCPFActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_campoCPFActionPerformed
+
+    private void campoNomeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_campoNomeActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_campoNomeActionPerformed
 
     /**
      * @param args the command line arguments

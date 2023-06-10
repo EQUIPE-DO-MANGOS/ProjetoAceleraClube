@@ -26,12 +26,17 @@ public class informaçaoCadastro extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        Voltar = new javax.swing.JLabel();
         informaçoesCadastro = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        Voltar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/Voltar.png"))); // NOI18N
+        Voltar.setText("jLabel2");
+        getContentPane().add(Voltar, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 330, 50, 50));
         getContentPane().add(informaçoesCadastro, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 110, 431, 220));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/ConsultaIndividual.png"))); // NOI18N
@@ -79,6 +84,7 @@ public class informaçaoCadastro extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel Voltar;
     private javax.swing.JTextField informaçoesCadastro;
     private javax.swing.JLabel jLabel1;
     // End of variables declaration//GEN-END:variables

@@ -3,12 +3,18 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-<<<<<<< HEAD
-            <file>file:/C:/Users/Matheus/OneDrive/Área%20de%20Trabalho/MANGOS/ProjetoAceleraClube/aceleraClube/src/packageimg/atualizarCadastro.java</file>
-            <file>file:/C:/Users/Matheus/OneDrive/Área%20de%20Trabalho/MANGOS/ProjetoAceleraClube/aceleraClube/src/Banco/conectarBanco.java</file>
-=======
-            <file>file:/C:/Users/cruze/Desktop/projeto%20acelera/ProjetoAceleraClube/aceleraClube/src/packageimg/telaMenu.java</file>
->>>>>>> f8c49cd1ed352ca14231fa599c8b92449262bdf5
+            <file>file:/C:/Users/User/Desktop/Nova%20pasta/ProjetoAceleraClube/aceleraClube/src/packageimg/telaLogin.java</file>
+            <file>file:/C:/Users/User/Desktop/Nova%20pasta/ProjetoAceleraClube/aceleraClube/src/packageimg/informaçaoCadastro.java</file>
+            <file>file:/C:/Users/User/Desktop/Nova%20pasta/ProjetoAceleraClube/aceleraClube/src/packageimg/listaAssociados.java</file>
+            <file>file:/C:/Users/User/Desktop/Nova%20pasta/ProjetoAceleraClube/aceleraClube/src/imagens/ListaAssociados.png</file>
+            <file>file:/C:/Users/User/Desktop/Nova%20pasta/ProjetoAceleraClube/aceleraClube/src/imagens/ConsultaIndividual.png</file>
+            <file>file:/C:/Users/User/Desktop/Nova%20pasta/ProjetoAceleraClube/aceleraClube/src/packageimg/telaConsulta.java</file>
+            <file>file:/C:/Users/User/Desktop/Nova%20pasta/ProjetoAceleraClube/aceleraClube/src/packageimg/telaMenu.java</file>
+            <file>file:/C:/Users/User/Desktop/Nova%20pasta/ProjetoAceleraClube/aceleraClube/src/packageimg/atualizarCadastro.java</file>
+            <file>file:/C:/Users/User/Desktop/Nova%20pasta/ProjetoAceleraClube/aceleraClube/src/packageimg/excluirCadastro.java</file>
+            <file>file:/C:/Users/User/Desktop/Nova%20pasta/ProjetoAceleraClube/aceleraClube/src/packageimg/telaCadastro.java</file>
+            <file>file:/C:/Users/User/Desktop/Nova%20pasta/ProjetoAceleraClube/aceleraClube/src/imagens/Consulta.png</file>
+            <file>file:/C:/Users/User/Desktop/Nova%20pasta/ProjetoAceleraClube/aceleraClube/src/imagens/Cadastro.png</file>
         </group>
     </open-files>
 </project-private>

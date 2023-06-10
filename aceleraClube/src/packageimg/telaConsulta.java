@@ -31,6 +31,7 @@ public class telaConsulta extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         btConsultar = new javax.swing.JButton();
         btLista = new javax.swing.JButton();
+        btVoltar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
@@ -39,13 +40,12 @@ public class telaConsulta extends javax.swing.JFrame {
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         digitarCpf.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        digitarCpf.setText("Digite o CPF");
         digitarCpf.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 digitarCpfActionPerformed(evt);
             }
         });
-        jPanel1.add(digitarCpf, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 132, 260, 30));
+        jPanel1.add(digitarCpf, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 150, 260, 30));
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/Consulta.png"))); // NOI18N
         jLabel2.setText("jLabel2");
@@ -64,6 +64,14 @@ public class telaConsulta extends javax.swing.JFrame {
         btLista.setContentAreaFilled(false);
         jPanel1.add(btLista, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 250, 140, -1));
 
+        btVoltar.setText("jButton2");
+        btVoltar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btVoltarActionPerformed(evt);
+            }
+        });
+        jPanel1.add(btVoltar, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 330, 50, 40));
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -81,6 +89,11 @@ public class telaConsulta extends javax.swing.JFrame {
     private void digitarCpfActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_digitarCpfActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_digitarCpfActionPerformed
+
+    private void btVoltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btVoltarActionPerformed
+        new telaMenu().show();
+        dispose();
+    }//GEN-LAST:event_btVoltarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -120,6 +133,7 @@ public class telaConsulta extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btConsultar;
     private javax.swing.JButton btLista;
+    private javax.swing.JButton btVoltar;
     private javax.swing.JTextField digitarCpf;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;

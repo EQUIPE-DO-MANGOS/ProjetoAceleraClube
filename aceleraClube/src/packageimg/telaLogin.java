@@ -25,6 +25,7 @@ public class telaLogin extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         loginUsuario = new javax.swing.JTextField();
         senhaUsuario = new javax.swing.JTextField();
+        jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         btConectar = new javax.swing.JButton();
 
@@ -33,21 +34,22 @@ public class telaLogin extends javax.swing.JFrame {
 
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        loginUsuario.setText("Login");
         loginUsuario.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 loginUsuarioActionPerformed(evt);
             }
         });
-        jPanel1.add(loginUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 150, 320, 40));
+        jPanel1.add(loginUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 160, 320, 30));
 
-        senhaUsuario.setText("Senha");
         senhaUsuario.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 senhaUsuarioActionPerformed(evt);
             }
         });
-        jPanel1.add(senhaUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 200, 320, 40));
+        jPanel1.add(senhaUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 210, 320, 30));
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/LoginSenha.png"))); // NOI18N
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 170, -1, -1));
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/TelaDeLogin.png"))); // NOI18N
         jLabel2.setText("jLabel2");
@@ -152,6 +154,7 @@ public class telaLogin extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btConectar;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JTextField loginUsuario;

@@ -47,32 +47,28 @@ public class atualizarCadastro extends javax.swing.JFrame {
         setResizable(false);
 
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        jPanel1.add(alteraNome, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 130, 320, -1));
+        jPanel1.add(alteraCpf, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 90, 270, -1));
+        jPanel1.add(alteraData, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 170, 130, -1));
+        jPanel1.add(alteraTelefone, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 170, 230, -1));
 
-        alteraNome.setText("Nome completo");
-        jPanel1.add(alteraNome, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 130, 290, -1));
+        alteraEmail.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                alteraEmailActionPerformed(evt);
+            }
+        });
+        jPanel1.add(alteraEmail, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 210, 290, -1));
 
-        alteraCpf.setText("CPF");
-        jPanel1.add(alteraCpf, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 90, 290, -1));
+        alteraEndereço.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                alteraEndereçoActionPerformed(evt);
+            }
+        });
+        jPanel1.add(alteraEndereço, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 250, 250, -1));
+        jPanel1.add(alteraCidade, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 290, 190, -1));
+        jPanel1.add(alteraCep, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 290, 110, -1));
 
-        alteraData.setText("Data de nascimento");
-        jPanel1.add(alteraData, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 170, 290, -1));
-
-        alteraTelefone.setText("Telefone");
-        jPanel1.add(alteraTelefone, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 210, 290, -1));
-
-        alteraEmail.setText("E-mail");
-        jPanel1.add(alteraEmail, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 250, 290, -1));
-
-        alteraEndereço.setText("Endereço");
-        jPanel1.add(alteraEndereço, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 290, 250, -1));
-
-        alteraCidade.setText("Cidade");
-        jPanel1.add(alteraCidade, new org.netbeans.lib.awtextra.AbsoluteConstraints(451, 290, 100, -1));
-
-        alteraCep.setText("CEP");
-        jPanel1.add(alteraCep, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 290, -1, -1));
-
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/EditarCadastro.png"))); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/AtualizarCadastro.png"))); // NOI18N
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-40, 0, 830, 400));
 
         btAtualizar.setText("jButton1");
@@ -97,7 +93,7 @@ public class atualizarCadastro extends javax.swing.JFrame {
                 btVoltarActionPerformed(evt);
             }
         });
-        jPanel1.add(btVoltar, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 20, -1, -1));
+        jPanel1.add(btVoltar, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 343, 50, 40));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -114,8 +110,8 @@ public class atualizarCadastro extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btVoltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btVoltarActionPerformed
-     new telaMenu().show();
-     dispose();
+        new telaMenu().show();
+        dispose();
     }//GEN-LAST:event_btVoltarActionPerformed
 
     private void btConsultarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btConsultarActionPerformed
@@ -211,6 +207,14 @@ public class atualizarCadastro extends javax.swing.JFrame {
 	}
 
     }//GEN-LAST:event_btAtualizarActionPerformed
+
+    private void alteraEmailActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_alteraEmailActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_alteraEmailActionPerformed
+
+    private void alteraEndereçoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_alteraEndereçoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_alteraEndereçoActionPerformed
 
     /**
      * @param args the command line arguments
