@@ -36,6 +36,7 @@ public class informaçaoCadastro extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         btConsultar = new javax.swing.JButton();
         btVoltar = new javax.swing.JButton();
+        btFechar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
@@ -92,6 +93,14 @@ public class informaçaoCadastro extends javax.swing.JFrame {
             }
         });
         getContentPane().add(btVoltar, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 340, 50, 50));
+
+        btFechar.setText("jButton1");
+        btFechar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btFecharActionPerformed(evt);
+            }
+        });
+        getContentPane().add(btFechar, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 13, 40, 40));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -162,6 +171,10 @@ public class informaçaoCadastro extends javax.swing.JFrame {
         dispose();
     }//GEN-LAST:event_btVoltarActionPerformed
 
+    private void btFecharActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btFecharActionPerformed
+       informaçaoCadastro.this.dispose(); 
+    }//GEN-LAST:event_btFecharActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -199,6 +212,7 @@ public class informaçaoCadastro extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btConsultar;
+    private javax.swing.JButton btFechar;
     private javax.swing.JButton btVoltar;
     private javax.swing.JTextField consultaCep;
     private javax.swing.JTextField consultaCidade;

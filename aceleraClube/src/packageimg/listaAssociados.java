@@ -30,6 +30,7 @@ public class listaAssociados extends javax.swing.JFrame {
         informaçoesAssociados = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
         btVoltar = new javax.swing.JButton();
+        btFechar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
@@ -50,6 +51,14 @@ public class listaAssociados extends javax.swing.JFrame {
         });
         getContentPane().add(btVoltar, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 340, 50, 40));
 
+        btFechar.setText("jButton1");
+        btFechar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btFecharActionPerformed(evt);
+            }
+        });
+        getContentPane().add(btFechar, new org.netbeans.lib.awtextra.AbsoluteConstraints(745, 10, 50, 40));
+
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
@@ -57,6 +66,10 @@ public class listaAssociados extends javax.swing.JFrame {
         new telaMenu().show();
         dispose();
     }//GEN-LAST:event_btVoltarActionPerformed
+
+    private void btFecharActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btFecharActionPerformed
+       listaAssociados.this.dispose(); 
+    }//GEN-LAST:event_btFecharActionPerformed
 
     /**
      * @param args the command line arguments
@@ -95,6 +108,7 @@ public class listaAssociados extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel Voltar;
+    private javax.swing.JButton btFechar;
     private javax.swing.JButton btVoltar;
     private javax.swing.JTextField informaçoesAssociados;
     private javax.swing.JLabel jLabel1;

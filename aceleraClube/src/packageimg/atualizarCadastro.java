@@ -42,6 +42,7 @@ public class atualizarCadastro extends javax.swing.JFrame {
         btAtualizar = new javax.swing.JButton();
         btConsultar = new javax.swing.JButton();
         btVoltar = new javax.swing.JButton();
+        btFechar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
@@ -94,6 +95,14 @@ public class atualizarCadastro extends javax.swing.JFrame {
             }
         });
         jPanel1.add(btVoltar, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 343, 50, 40));
+
+        btFechar.setText("jButton1");
+        btFechar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btFecharActionPerformed(evt);
+            }
+        });
+        jPanel1.add(btFechar, new org.netbeans.lib.awtextra.AbsoluteConstraints(745, 10, 40, 40));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -217,6 +226,10 @@ public class atualizarCadastro extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_alteraEndereçoActionPerformed
 
+    private void btFecharActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btFecharActionPerformed
+      atualizarCadastro.this.dispose(); 
+    }//GEN-LAST:event_btFecharActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -264,6 +277,7 @@ public class atualizarCadastro extends javax.swing.JFrame {
     private javax.swing.JTextField alteraTelefone;
     private javax.swing.JButton btAtualizar;
     private javax.swing.JButton btConsultar;
+    private javax.swing.JButton btFechar;
     private javax.swing.JButton btVoltar;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;

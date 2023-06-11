@@ -31,6 +31,7 @@ public class telaConsulta extends javax.swing.JFrame {
         btConsultar = new javax.swing.JButton();
         btLista = new javax.swing.JButton();
         btVoltar = new javax.swing.JButton();
+        btFechar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
@@ -73,6 +74,13 @@ public class telaConsulta extends javax.swing.JFrame {
         });
         jPanel1.add(btVoltar, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 330, 50, 40));
 
+        btFechar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btFecharActionPerformed(evt);
+            }
+        });
+        jPanel1.add(btFechar, new org.netbeans.lib.awtextra.AbsoluteConstraints(745, 10, 50, 40));
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -99,6 +107,10 @@ public class telaConsulta extends javax.swing.JFrame {
     private void btConsultarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btConsultarActionPerformed
         consultar.setVisible(true);
     }//GEN-LAST:event_btConsultarActionPerformed
+
+    private void btFecharActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btFecharActionPerformed
+       telaConsulta.this.dispose(); 
+    }//GEN-LAST:event_btFecharActionPerformed
 
     /**
      * @param args the command line arguments
@@ -137,6 +149,7 @@ public class telaConsulta extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btConsultar;
+    private javax.swing.JButton btFechar;
     private javax.swing.JButton btLista;
     private javax.swing.JButton btVoltar;
     private javax.swing.JLabel jLabel2;

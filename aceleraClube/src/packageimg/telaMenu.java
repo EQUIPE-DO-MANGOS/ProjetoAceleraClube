@@ -38,6 +38,7 @@ public class telaMenu extends javax.swing.JFrame {
         btExcluir = new javax.swing.JButton();
         btCadastrar = new javax.swing.JButton();
         btConsultar = new javax.swing.JButton();
+        btFechar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
@@ -88,11 +89,19 @@ public class telaMenu extends javax.swing.JFrame {
         });
         jPanel1.add(btConsultar, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 170, 120, -1));
 
+        btFechar.setText("jButton1");
+        btFechar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btFecharActionPerformed(evt);
+            }
+        });
+        jPanel1.add(btFechar, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 10, 40, 40));
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 790, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 795, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -122,6 +131,10 @@ public class telaMenu extends javax.swing.JFrame {
         // TODO add your handling code here:
         cadastrar.setVisible(true);
     }//GEN-LAST:event_btEditarActionPerformed
+
+    private void btFecharActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btFecharActionPerformed
+       telaMenu.this.dispose(); 
+    }//GEN-LAST:event_btFecharActionPerformed
 
     /**
      * @param args the command line arguments
@@ -163,6 +176,7 @@ public class telaMenu extends javax.swing.JFrame {
     private javax.swing.JButton btConsultar;
     private javax.swing.JButton btEditar;
     private javax.swing.JButton btExcluir;
+    private javax.swing.JButton btFechar;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
