@@ -115,7 +115,7 @@ public class atualizarCadastro extends javax.swing.JFrame {
     }//GEN-LAST:event_btVoltarActionPerformed
 
     private void btConsultarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btConsultarActionPerformed
-        int status;
+               int status;
 				
 				
 	try
@@ -133,6 +133,7 @@ public class atualizarCadastro extends javax.swing.JFrame {
 		   
                    if(cpfAtual.compareTo(cpfConsulta)==0)
 		   {
+                       nomeAtual=res.getString("nome");
 			  enderecoAtual = res.getString("endereco");
 			  telefoneAtual = res.getString("telefone");
 			  emailAtual = res.getString("email");
@@ -144,6 +145,7 @@ public class atualizarCadastro extends javax.swing.JFrame {
 		}
 		if(status == 1)
 		{
+                    alteraNome.setText(nomeAtual);
 			alteraEndereço.setText(enderecoAtual);
 			alteraTelefone.setText(telefoneAtual);
 			alteraEmail.setText(emailAtual);
@@ -167,13 +169,12 @@ public class atualizarCadastro extends javax.swing.JFrame {
     }//GEN-LAST:event_btConsultarActionPerformed
 
     private void btAtualizarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btAtualizarActionPerformed
-        String classeDriver = "com.mysql.cj.jdbc.Driver";
+                String classeDriver = "com.mysql.cj.jdbc.Driver";
 	String stringconectarBanco = "jdbc:mysql://localhost:/acelera";
 	String Usuario = "root";
 	String Senha = "";
 	Connection con;
 	String sql;
-        
         novoNome = alteraNome.getText();
 	novoEndereco = alteraEndereço.getText();
 	novoTelefone = alteraTelefone.getText();
@@ -191,11 +192,11 @@ public class atualizarCadastro extends javax.swing.JFrame {
 	    con = DriverManager.getConnection(stringconectarBanco, Usuario, Senha);
 	    PreparedStatement stmt = con.prepareStatement(sql);
              
-            int x=stmt.executeUpdate("UPDATE associados SET cpf='"+cpfAtual+"'," +
-	         "endereco='"+novoEndereco+"', telefone='"+novoTelefone+"', nome='"+novoNome+"',"+
-	         "email='"+novoEmail+"', cep='"+novoCEP+"', nascimento='"+novoNascimento+"', cidade='"+novoCidade+"' WHERE nome='"+cpfAtual+"';");
-            if (x == 1 )
-                JOptionPane.showMessageDialog(null,"Cadastro atualizado com sucesso!","",JOptionPane.INFORMATION_MESSAGE);
+            int x=stmt.executeUpdate("UPDATE associados SET Nome='"+novoNome+"',Endereco='"+novoEndereco+"', Telefone='"+novoTelefone+"',"+
+	         "Email='"+novoEmail+"', Cep='"+novoCEP+"', Nascimento='"+novoNascimento+"', Cidade='"+novoCidade+"' WHERE cpf='"+cpfConsulta+"'");
+            JOptionPane.showMessageDialog(null,"Cadastro atualizado com sucesso!","",JOptionPane.INFORMATION_MESSAGE);
+            
+         
         }
         catch(SQLException ex)
 	{

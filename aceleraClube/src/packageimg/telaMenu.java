@@ -107,14 +107,7 @@ public class telaMenu extends javax.swing.JFrame {
         consultar.setVisible(true);
     }//GEN-LAST:event_btConsultarActionPerformed
 
-<<<<<<< HEAD
-    private void btEditarActionPerformed(java.awt.event.ActionEvent evt) {                                         
-        // TODO add your handling code here:
-        cadastrar.setVisible(true);
-    }                                        
 
-=======
->>>>>>> f8c49cd1ed352ca14231fa599c8b92449262bdf5
     private void btCadastrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btCadastrarActionPerformed
         // TODO add your handling code here:
         editar.setVisible(true);
@@ -127,7 +120,7 @@ public class telaMenu extends javax.swing.JFrame {
 
     private void btEditarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btEditarActionPerformed
         // TODO add your handling code here:
-        editar.setVisible(true);
+        cadastrar.setVisible(true);
     }//GEN-LAST:event_btEditarActionPerformed
 
     /**

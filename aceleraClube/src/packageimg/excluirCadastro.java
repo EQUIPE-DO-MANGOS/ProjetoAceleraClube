@@ -1,13 +1,10 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- */
+
 package packageimg;
 
-/**
- *
- * @author cruze
- */
+import Banco.associadosBanco;
+import Dados.Associados;
+import javax.swing.JOptionPane;
+
 public class excluirCadastro extends javax.swing.JFrame {
 
     /**
@@ -29,7 +26,7 @@ public class excluirCadastro extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         cpfExcluir = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
-        btConsulta = new javax.swing.JButton();
+        btExcluir = new javax.swing.JButton();
         btVoltar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -48,8 +45,13 @@ public class excluirCadastro extends javax.swing.JFrame {
         jLabel1.setText("jLabel1");
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-40, 0, 830, 400));
 
-        btConsulta.setText("jButton1");
-        jPanel1.add(btConsulta, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 240, 140, 30));
+        btExcluir.setText("jButton1");
+        btExcluir.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btExcluirActionPerformed(evt);
+            }
+        });
+        jPanel1.add(btExcluir, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 240, 140, 30));
 
         btVoltar.setText("jButton2");
         btVoltar.addActionListener(new java.awt.event.ActionListener() {
@@ -81,6 +83,26 @@ public class excluirCadastro extends javax.swing.JFrame {
         new telaMenu().show();
         dispose();
     }//GEN-LAST:event_btVoltarActionPerformed
+
+    private void btExcluirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btExcluirActionPerformed
+        String cpf;
+				
+	associadosBanco associadosbanco = new associadosBanco();
+	Associados associados = new Associados();
+        
+        cpf = cpfExcluir.getText();
+				
+	associados.setCPF(cpf);
+				
+	if(associadosbanco.excluirAssociado(associados) == true)
+	{
+		JOptionPane.showMessageDialog(null, "Pessoa exclu�da com sucesso!!!", "Exclus�o",JOptionPane.INFORMATION_MESSAGE);
+	}
+	else
+	{
+		JOptionPane.showMessageDialog(null, "Pessoa n�o exclu�da!!!", "Erro",JOptionPane.ERROR_MESSAGE);
+	}		
+    }//GEN-LAST:event_btExcluirActionPerformed
 
     /**
      * @param args the command line arguments
@@ -118,7 +140,7 @@ public class excluirCadastro extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btConsulta;
+    private javax.swing.JButton btExcluir;
     private javax.swing.JButton btVoltar;
     private javax.swing.JTextField cpfExcluir;
     private javax.swing.JLabel jLabel1;
