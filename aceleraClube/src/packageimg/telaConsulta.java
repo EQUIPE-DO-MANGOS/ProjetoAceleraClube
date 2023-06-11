@@ -10,11 +10,11 @@ package packageimg;
  */
 public class telaConsulta extends javax.swing.JFrame {
 
-    /**
-     * Creates new form telaConsulta
-     */
+    private informaçaoCadastro consultar;
+    
     public telaConsulta() {
         initComponents();
+        consultar = new informaçaoCadastro();
     }
 
     /**
@@ -48,11 +48,21 @@ public class telaConsulta extends javax.swing.JFrame {
         btConsultar.setBackground(new java.awt.Color(102, 255, 153));
         btConsultar.setText("CONSULTAR");
         btConsultar.setContentAreaFilled(false);
+        btConsultar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btConsultarActionPerformed(evt);
+            }
+        });
         jPanel1.add(btConsultar, new org.netbeans.lib.awtextra.AbsoluteConstraints(332, 170, 130, 30));
 
         btLista.setBackground(new java.awt.Color(0, 153, 153));
         btLista.setText("RELATÓRIO ASSOCIADOS");
         btLista.setContentAreaFilled(false);
+        btLista.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btListaActionPerformed(evt);
+            }
+        });
         jPanel1.add(btLista, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 233, 120, -1));
 
         btVoltar.setText("jButton2");
@@ -81,6 +91,14 @@ public class telaConsulta extends javax.swing.JFrame {
         new telaMenu().show();
         dispose();
     }//GEN-LAST:event_btVoltarActionPerformed
+
+    private void btListaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btListaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btListaActionPerformed
+
+    private void btConsultarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btConsultarActionPerformed
+        consultar.setVisible(true);
+    }//GEN-LAST:event_btConsultarActionPerformed
 
     /**
      * @param args the command line arguments

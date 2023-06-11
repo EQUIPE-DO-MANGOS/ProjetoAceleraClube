@@ -4,15 +4,14 @@
  */
 package packageimg;
 
-/**
- *
- * @author cruze
- */
+import java.sql.*;
+import javax.swing.JOptionPane;
+
 public class informaçaoCadastro extends javax.swing.JFrame {
 
-    /**
-     * Creates new form informaçaoCadastro
-     */
+     private String nomeAtual, enderecoAtual, telefoneAtual, emailAtual, cpfAtual, cepAtual, nascimentoAtual, cidadeAtual;
+     private String cpfConsulta = "";
+     
     public informaçaoCadastro() {
         initComponents();
     }
@@ -159,7 +158,7 @@ public class informaçaoCadastro extends javax.swing.JFrame {
     }//GEN-LAST:event_btConsultarActionPerformed
 
     private void btVoltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btVoltarActionPerformed
-        new telaMenu().show();
+        new telaConsulta().show();
         dispose();
     }//GEN-LAST:event_btVoltarActionPerformed
 
