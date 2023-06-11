@@ -24,7 +24,7 @@ public class telaLogin extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         loginUsuario = new javax.swing.JTextField();
-        senhaUsuario = new javax.swing.JTextField();
+        senhaUsuario = new javax.swing.JPasswordField();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         btConectar = new javax.swing.JButton();
@@ -41,12 +41,18 @@ public class telaLogin extends javax.swing.JFrame {
         });
         jPanel1.add(loginUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 160, 320, 30));
 
+        senhaUsuario.setText("jPasswordField1");
+        senhaUsuario.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                senhaUsuarioFocusGained(evt);
+            }
+        });
         senhaUsuario.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 senhaUsuarioActionPerformed(evt);
             }
         });
-        jPanel1.add(senhaUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 210, 320, 30));
+        jPanel1.add(senhaUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 212, 320, 30));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/LoginSenha.png"))); // NOI18N
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 170, -1, -1));
@@ -83,10 +89,6 @@ public class telaLogin extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void senhaUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_senhaUsuarioActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_senhaUsuarioActionPerformed
-
     private void btConectarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btConectarActionPerformed
   String Usuario;
 	String Senha;
@@ -116,6 +118,14 @@ public class telaLogin extends javax.swing.JFrame {
     private void loginUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loginUsuarioActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_loginUsuarioActionPerformed
+
+    private void senhaUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_senhaUsuarioActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_senhaUsuarioActionPerformed
+
+    private void senhaUsuarioFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_senhaUsuarioFocusGained
+     senhaUsuario.setText("");
+    }//GEN-LAST:event_senhaUsuarioFocusGained
 
     /**
      * @param args the command line arguments
@@ -158,6 +168,6 @@ public class telaLogin extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JTextField loginUsuario;
-    private javax.swing.JTextField senhaUsuario;
+    private javax.swing.JPasswordField senhaUsuario;
     // End of variables declaration//GEN-END:variables
 }
