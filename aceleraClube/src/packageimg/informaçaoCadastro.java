@@ -72,6 +72,12 @@ public class informaçaoCadastro extends javax.swing.JFrame {
 
         consultaNome.setEditable(false);
         getContentPane().add(consultaNome, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 130, 320, -1));
+
+        consultaCpf.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                consultaCpfKeyPressed(evt);
+            }
+        });
         getContentPane().add(consultaCpf, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 90, 270, -1));
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/Informações.png"))); // NOI18N
@@ -174,6 +180,17 @@ public class informaçaoCadastro extends javax.swing.JFrame {
     private void btFecharActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btFecharActionPerformed
        informaçaoCadastro.this.dispose(); 
     }//GEN-LAST:event_btFecharActionPerformed
+
+    private void consultaCpfKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_consultaCpfKeyPressed
+        String numFornecido = consultaCpf.getText();
+
+    int quantCaracteres = numFornecido.length();
+    if (quantCaracteres > 10){
+    numFornecido = numFornecido.substring (0, numFornecido.length() - 1);
+    consultaCpf.setText(numFornecido);
+
+   }
+    }//GEN-LAST:event_consultaCpfKeyPressed
 
     /**
      * @param args the command line arguments

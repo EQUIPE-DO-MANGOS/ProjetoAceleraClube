@@ -56,12 +56,35 @@ public class telaCadastro extends javax.swing.JFrame {
                 campoCPFActionPerformed(evt);
             }
         });
+        campoCPF.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                campoCPFKeyPressed(evt);
+            }
+        });
         jPanel1.add(campoCPF, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 90, 310, -1));
+
+        campoData.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                campoDataKeyPressed(evt);
+            }
+        });
         jPanel1.add(campoData, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 170, 130, -1));
+
+        campoTelefone.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                campoTelefoneKeyPressed(evt);
+            }
+        });
         jPanel1.add(campoTelefone, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 170, 170, -1));
         jPanel1.add(campoEmail, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 210, 310, -1));
         jPanel1.add(campoEndereço, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 250, 310, -1));
         jPanel1.add(campoCidade, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 290, 190, -1));
+
+        campoCep.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                campoCepKeyPressed(evt);
+            }
+        });
         jPanel1.add(campoCep, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 290, 100, -1));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/Cadastro.png"))); // NOI18N
@@ -158,6 +181,50 @@ public class telaCadastro extends javax.swing.JFrame {
     private void btFecharActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btFecharActionPerformed
       telaCadastro.this.dispose(); 
     }//GEN-LAST:event_btFecharActionPerformed
+
+    private void campoCPFKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_campoCPFKeyPressed
+        String numFornecido = campoCPF.getText();
+
+    int quantCaracteres = numFornecido.length();
+    if (quantCaracteres > 10){
+    numFornecido = numFornecido.substring (0, numFornecido.length() - 1);
+    campoCPF.setText(numFornecido);
+
+   }
+    }//GEN-LAST:event_campoCPFKeyPressed
+
+    private void campoDataKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_campoDataKeyPressed
+          String numFornecido = campoData.getText();
+
+    int quantCaracteres = numFornecido.length();
+    if (quantCaracteres > 7){
+    numFornecido = numFornecido.substring (0, numFornecido.length() - 1);
+    campoData.setText(numFornecido);
+
+   }
+    }//GEN-LAST:event_campoDataKeyPressed
+
+    private void campoTelefoneKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_campoTelefoneKeyPressed
+    String numFornecido = campoTelefone.getText();
+
+    int quantCaracteres = numFornecido.length();
+    if (quantCaracteres > 10){
+    numFornecido = numFornecido.substring (0, numFornecido.length() - 1);
+    campoTelefone.setText(numFornecido);
+
+   }
+    }//GEN-LAST:event_campoTelefoneKeyPressed
+
+    private void campoCepKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_campoCepKeyPressed
+    String numFornecido = campoCep.getText();
+
+    int quantCaracteres = numFornecido.length();
+    if (quantCaracteres > 7){
+    numFornecido = numFornecido.substring (0, numFornecido.length() - 1);
+    campoCep.setText(numFornecido);
+
+   }
+    }//GEN-LAST:event_campoCepKeyPressed
 
     /**
      * @param args the command line arguments

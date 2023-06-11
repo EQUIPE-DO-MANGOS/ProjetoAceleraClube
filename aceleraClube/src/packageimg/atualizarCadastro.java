@@ -49,8 +49,26 @@ public class atualizarCadastro extends javax.swing.JFrame {
 
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
         jPanel1.add(alteraNome, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 130, 320, -1));
+
+        alteraCpf.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                alteraCpfKeyPressed(evt);
+            }
+        });
         jPanel1.add(alteraCpf, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 90, 270, -1));
+
+        alteraData.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                alteraDataKeyPressed(evt);
+            }
+        });
         jPanel1.add(alteraData, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 170, 130, -1));
+
+        alteraTelefone.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                alteraTelefoneKeyPressed(evt);
+            }
+        });
         jPanel1.add(alteraTelefone, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 170, 230, -1));
 
         alteraEmail.addActionListener(new java.awt.event.ActionListener() {
@@ -67,6 +85,12 @@ public class atualizarCadastro extends javax.swing.JFrame {
         });
         jPanel1.add(alteraEndereço, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 250, 250, -1));
         jPanel1.add(alteraCidade, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 290, 190, -1));
+
+        alteraCep.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                alteraCepKeyPressed(evt);
+            }
+        });
         jPanel1.add(alteraCep, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 290, 110, -1));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/AtualizarCadastro.png"))); // NOI18N
@@ -229,6 +253,50 @@ public class atualizarCadastro extends javax.swing.JFrame {
     private void btFecharActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btFecharActionPerformed
       atualizarCadastro.this.dispose(); 
     }//GEN-LAST:event_btFecharActionPerformed
+
+    private void alteraCpfKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_alteraCpfKeyPressed
+            String numFornecido = alteraCpf.getText();
+
+    int quantCaracteres = numFornecido.length();
+    if (quantCaracteres > 10){
+    numFornecido = numFornecido.substring (0, numFornecido.length() - 1);
+    alteraCpf.setText(numFornecido);
+
+   }
+    }//GEN-LAST:event_alteraCpfKeyPressed
+
+    private void alteraDataKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_alteraDataKeyPressed
+            String numFornecido = alteraData.getText();
+
+    int quantCaracteres = numFornecido.length();
+    if (quantCaracteres > 7){
+    numFornecido = numFornecido.substring (0, numFornecido.length() - 1);
+    alteraData.setText(numFornecido);
+
+   }
+    }//GEN-LAST:event_alteraDataKeyPressed
+
+    private void alteraTelefoneKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_alteraTelefoneKeyPressed
+       String numFornecido = alteraTelefone.getText();
+
+    int quantCaracteres = numFornecido.length();
+    if (quantCaracteres > 10){
+    numFornecido = numFornecido.substring (0, numFornecido.length() - 1);
+    alteraTelefone.setText(numFornecido);
+
+   }
+    }//GEN-LAST:event_alteraTelefoneKeyPressed
+
+    private void alteraCepKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_alteraCepKeyPressed
+        String numFornecido = alteraCep.getText();
+
+    int quantCaracteres = numFornecido.length();
+    if (quantCaracteres > 7){
+    numFornecido = numFornecido.substring (0, numFornecido.length() - 1);
+    alteraCep.setText(numFornecido);
+
+   }
+    }//GEN-LAST:event_alteraCepKeyPressed
 
     /**
      * @param args the command line arguments

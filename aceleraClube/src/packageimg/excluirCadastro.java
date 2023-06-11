@@ -40,6 +40,11 @@ public class excluirCadastro extends javax.swing.JFrame {
                 cpfExcluirActionPerformed(evt);
             }
         });
+        cpfExcluir.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                cpfExcluirKeyPressed(evt);
+            }
+        });
         jPanel1.add(cpfExcluir, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 190, 240, 30));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/Excluir Cadastro_1.png"))); // NOI18N
@@ -116,6 +121,17 @@ public class excluirCadastro extends javax.swing.JFrame {
     private void btFecharActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btFecharActionPerformed
     excluirCadastro.this.dispose(); 
     }//GEN-LAST:event_btFecharActionPerformed
+
+    private void cpfExcluirKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_cpfExcluirKeyPressed
+               String numFornecido = cpfExcluir.getText();
+
+    int quantCaracteres = numFornecido.length();
+    if (quantCaracteres > 10){
+    numFornecido = numFornecido.substring (0, numFornecido.length() - 1);
+    cpfExcluir.setText(numFornecido);
+
+   }
+    }//GEN-LAST:event_cpfExcluirKeyPressed
 
     /**
      * @param args the command line arguments
