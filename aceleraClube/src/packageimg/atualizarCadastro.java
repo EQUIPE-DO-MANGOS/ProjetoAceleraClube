@@ -85,7 +85,7 @@ public class atualizarCadastro extends javax.swing.JFrame {
                 btConsultarActionPerformed(evt);
             }
         });
-        jPanel1.add(btConsultar, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 90, -1, -1));
+        jPanel1.add(btConsultar, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 83, 130, 30));
 
         btVoltar.setText("jButton2");
         btVoltar.addActionListener(new java.awt.event.ActionListener() {

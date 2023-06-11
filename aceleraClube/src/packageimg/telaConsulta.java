@@ -27,7 +27,6 @@ public class telaConsulta extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        digitarCpf = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
         btConsultar = new javax.swing.JButton();
         btLista = new javax.swing.JButton();
@@ -39,14 +38,6 @@ public class telaConsulta extends javax.swing.JFrame {
         jPanel1.setPreferredSize(new java.awt.Dimension(880, 480));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        digitarCpf.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        digitarCpf.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                digitarCpfActionPerformed(evt);
-            }
-        });
-        jPanel1.add(digitarCpf, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 150, 260, 30));
-
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/Consulta.png"))); // NOI18N
         jLabel2.setText("jLabel2");
         jLabel2.setMaximumSize(new java.awt.Dimension(800, 400));
@@ -57,12 +48,12 @@ public class telaConsulta extends javax.swing.JFrame {
         btConsultar.setBackground(new java.awt.Color(102, 255, 153));
         btConsultar.setText("CONSULTAR");
         btConsultar.setContentAreaFilled(false);
-        jPanel1.add(btConsultar, new org.netbeans.lib.awtextra.AbsoluteConstraints(332, 197, 140, -1));
+        jPanel1.add(btConsultar, new org.netbeans.lib.awtextra.AbsoluteConstraints(332, 170, 130, 30));
 
         btLista.setBackground(new java.awt.Color(0, 153, 153));
         btLista.setText("RELATÓRIO ASSOCIADOS");
         btLista.setContentAreaFilled(false);
-        jPanel1.add(btLista, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 250, 140, -1));
+        jPanel1.add(btLista, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 233, 120, -1));
 
         btVoltar.setText("jButton2");
         btVoltar.addActionListener(new java.awt.event.ActionListener() {
@@ -85,10 +76,6 @@ public class telaConsulta extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void digitarCpfActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_digitarCpfActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_digitarCpfActionPerformed
 
     private void btVoltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btVoltarActionPerformed
         new telaMenu().show();
@@ -134,7 +121,6 @@ public class telaConsulta extends javax.swing.JFrame {
     private javax.swing.JButton btConsultar;
     private javax.swing.JButton btLista;
     private javax.swing.JButton btVoltar;
-    private javax.swing.JTextField digitarCpf;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables

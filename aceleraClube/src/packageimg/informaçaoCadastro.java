@@ -26,27 +26,142 @@ public class informaçaoCadastro extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        Voltar = new javax.swing.JLabel();
-        informaçoesCadastro = new javax.swing.JTextField();
-        jLabel1 = new javax.swing.JLabel();
+        consultaCidade = new javax.swing.JTextField();
+        consultaEndereço = new javax.swing.JTextField();
+        consultaEmail = new javax.swing.JTextField();
+        consultaCep = new javax.swing.JTextField();
+        consultaTelefone = new javax.swing.JTextField();
+        consultaData = new javax.swing.JTextField();
+        consultaNome = new javax.swing.JTextField();
+        consultaCpf = new javax.swing.JTextField();
+        jLabel2 = new javax.swing.JLabel();
+        btConsultar = new javax.swing.JButton();
+        btVoltar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        Voltar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/Voltar.png"))); // NOI18N
-        Voltar.setText("jLabel2");
-        getContentPane().add(Voltar, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 330, 50, 50));
-        getContentPane().add(informaçoesCadastro, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 110, 431, 220));
+        consultaCidade.setEditable(false);
+        getContentPane().add(consultaCidade, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 290, 190, -1));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/ConsultaIndividual.png"))); // NOI18N
-        jLabel1.setText("jLabel1");
-        jLabel1.setMaximumSize(new java.awt.Dimension(840, 400));
-        jLabel1.setMinimumSize(new java.awt.Dimension(840, 400));
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-40, 0, 830, 400));
+        consultaEndereço.setEditable(false);
+        consultaEndereço.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                consultaEndereçoActionPerformed(evt);
+            }
+        });
+        getContentPane().add(consultaEndereço, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 250, 250, -1));
+
+        consultaEmail.setEditable(false);
+        consultaEmail.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                consultaEmailActionPerformed(evt);
+            }
+        });
+        getContentPane().add(consultaEmail, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 210, 290, -1));
+
+        consultaCep.setEditable(false);
+        getContentPane().add(consultaCep, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 290, 110, -1));
+
+        consultaTelefone.setEditable(false);
+        getContentPane().add(consultaTelefone, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 170, 230, -1));
+
+        consultaData.setEditable(false);
+        getContentPane().add(consultaData, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 170, 130, -1));
+
+        consultaNome.setEditable(false);
+        getContentPane().add(consultaNome, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 130, 320, -1));
+        getContentPane().add(consultaCpf, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 90, 270, -1));
+
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/Informações.png"))); // NOI18N
+        jLabel2.setText("jLabel2");
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(-40, 0, 830, 400));
+
+        btConsultar.setText("jButton1");
+        btConsultar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btConsultarActionPerformed(evt);
+            }
+        });
+        getContentPane().add(btConsultar, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 83, 130, 30));
+
+        btVoltar.setText("jButton2");
+        btVoltar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btVoltarActionPerformed(evt);
+            }
+        });
+        getContentPane().add(btVoltar, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 340, 50, 50));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void consultaEmailActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_consultaEmailActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_consultaEmailActionPerformed
+
+    private void consultaEndereçoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_consultaEndereçoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_consultaEndereçoActionPerformed
+
+    private void btConsultarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btConsultarActionPerformed
+        int status;
+
+        try
+        {
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            Connection con = DriverManager.getConnection("jdbc:mysql://localhost/acelera","root","");
+            Statement stm = con.createStatement();
+            ResultSet res = stm.executeQuery("SELECT * from associados");
+
+            cpfConsulta = consultaCpf.getText();
+            status = 0;
+            while(res.next())
+            {
+                cpfAtual = res.getString("cpf");
+
+                if(cpfAtual.compareTo(cpfConsulta)==0)
+                {
+                    nomeAtual=res.getString("nome");
+                    enderecoAtual = res.getString("endereco");
+                    telefoneAtual = res.getString("telefone");
+                    emailAtual = res.getString("email");
+                    cepAtual  = res.getString("cep");
+                    nascimentoAtual = res.getString("nascimento");
+                    cidadeAtual = res.getString("cidade");
+                    status = 1;
+                }
+            }
+            if(status == 1)
+            {
+                consultaNome.setText(nomeAtual);
+                consultaEndereço.setText(enderecoAtual);
+                consultaTelefone.setText(telefoneAtual);
+                consultaEmail.setText(emailAtual);
+                consultaCep.setText(cepAtual);
+                consultaData.setText(nascimentoAtual);
+                consultaCidade.setText(cidadeAtual);
+            }
+            if(status == 0)
+            {
+                JOptionPane.showMessageDialog(null,"Nome: "+cpfConsulta+" n�o encontrado!!!","Erro",JOptionPane.ERROR_MESSAGE);
+            }
+        }
+        catch(ClassNotFoundException ex)
+        {
+            JOptionPane.showMessageDialog(null,ex.getMessage(),"Erro",JOptionPane.ERROR_MESSAGE);
+        }
+        catch(SQLException ex)
+        {
+            JOptionPane.showMessageDialog(null,ex.getMessage(),"Erro",JOptionPane.ERROR_MESSAGE);
+        }
+    }//GEN-LAST:event_btConsultarActionPerformed
+
+    private void btVoltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btVoltarActionPerformed
+        new telaMenu().show();
+        dispose();
+    }//GEN-LAST:event_btVoltarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -84,8 +199,16 @@ public class informaçaoCadastro extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel Voltar;
-    private javax.swing.JTextField informaçoesCadastro;
-    private javax.swing.JLabel jLabel1;
+    private javax.swing.JButton btConsultar;
+    private javax.swing.JButton btVoltar;
+    private javax.swing.JTextField consultaCep;
+    private javax.swing.JTextField consultaCidade;
+    private javax.swing.JTextField consultaCpf;
+    private javax.swing.JTextField consultaData;
+    private javax.swing.JTextField consultaEmail;
+    private javax.swing.JTextField consultaEndereço;
+    private javax.swing.JTextField consultaNome;
+    private javax.swing.JTextField consultaTelefone;
+    private javax.swing.JLabel jLabel2;
     // End of variables declaration//GEN-END:variables
 }
