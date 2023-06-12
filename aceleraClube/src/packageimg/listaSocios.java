@@ -1,4 +1,4 @@
-package packageimg;
+/* package packageimg;
 
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
@@ -83,4 +83,4 @@ public class listaSocios {
 		btnConsultar.setBounds(36, 401, 124, 23);
 		c.add(btnConsultar);
 	   
-}
+} */

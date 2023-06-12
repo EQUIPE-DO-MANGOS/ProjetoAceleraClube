@@ -101,11 +101,13 @@ public class telaConsulta extends javax.swing.JFrame {
     }//GEN-LAST:event_btVoltarActionPerformed
 
     private void btListaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btListaActionPerformed
-        // TODO add your handling code here:
+        new listaAssociados().show();
+        dispose();
     }//GEN-LAST:event_btListaActionPerformed
 
     private void btConsultarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btConsultarActionPerformed
         consultar.setVisible(true);
+        dispose();
     }//GEN-LAST:event_btConsultarActionPerformed
 
     private void btFecharActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btFecharActionPerformed
