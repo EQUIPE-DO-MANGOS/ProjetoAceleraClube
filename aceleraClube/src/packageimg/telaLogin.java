@@ -114,7 +114,7 @@ public class telaLogin extends javax.swing.JFrame {
 	}
 	else
 	{
-            JOptionPane.showMessageDialog(null, "Erro nos dados informados", "Erro", JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(null, "Usuario ou senha incorretos", "Erro", JOptionPane.ERROR_MESSAGE);
 	}
            
 

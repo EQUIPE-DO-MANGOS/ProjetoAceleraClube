@@ -58,7 +58,7 @@ public class associadosBanco {
 
 public boolean atualizarAssociado(Associados associados, String CPFAlterar) 
     {
-        System.out.println("Atualizar Pessoa");
+        System.out.println("Atualizar Associado");
         
         connection = conectarBanco.getInstance().getConnection();
         System.out.println("Conectado e pronto para atualizar");
@@ -104,7 +104,7 @@ public boolean atualizarAssociado(Associados associados, String CPFAlterar)
     	String dados = "";
     	
     	connection = conectarBanco.getInstance().getConnection();
-        System.out.println("Conectado e preparando a listagem");
+        System.out.println("Conectado e preparando a lista dos socios");
         Statement stmt = null;
         
         try
@@ -153,7 +153,7 @@ public boolean atualizarAssociado(Associados associados, String CPFAlterar)
         ArrayList<Associados> listaAssociados = new ArrayList<Associados>();
       
         connection = conectarBanco.getInstance().getConnection();
-        System.out.println("Conectado e preparando a listagem");
+        System.out.println("Conectado e preparando a lista dos socios");
         Statement stmt = null;
         
         try

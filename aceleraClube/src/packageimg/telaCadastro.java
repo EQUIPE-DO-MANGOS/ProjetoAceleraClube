@@ -151,7 +151,7 @@ public class telaCadastro extends javax.swing.JFrame {
         
         if(associadosbanco.inserirAssociado(associados) == true)
 	{
-		JOptionPane.showMessageDialog(null, "Pessoa cadastrada com sucesso!!!", "Cadastro",JOptionPane.INFORMATION_MESSAGE);
+		JOptionPane.showMessageDialog(null, "Socio cadastrado!", "Cadastro",JOptionPane.INFORMATION_MESSAGE);
 	}
 	else
 	{

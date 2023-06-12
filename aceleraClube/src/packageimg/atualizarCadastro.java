@@ -188,7 +188,7 @@ public class atualizarCadastro extends javax.swing.JFrame {
 		}
 		if(status == 0)
 		{
-			JOptionPane.showMessageDialog(null,"Nome: "+cpfConsulta+" n�o encontrado!!!","Erro",JOptionPane.ERROR_MESSAGE);
+			JOptionPane.showMessageDialog(null,"CPF: "+cpfConsulta+" nao encontrado!!!","Erro",JOptionPane.ERROR_MESSAGE);
 		}
 	}
 	catch(ClassNotFoundException ex)

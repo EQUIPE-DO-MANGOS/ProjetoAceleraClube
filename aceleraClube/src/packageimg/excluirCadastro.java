@@ -101,11 +101,11 @@ public class excluirCadastro extends javax.swing.JFrame {
 				
 	if(associadosbanco.excluirAssociado(associados) == true)
 	{
-		JOptionPane.showMessageDialog(null, "Pessoa exclu�da com sucesso!!!", "Exclus�o",JOptionPane.INFORMATION_MESSAGE);
+		JOptionPane.showMessageDialog(null, "Socio excluido!", "Exclus�o",JOptionPane.INFORMATION_MESSAGE);
 	}
 	else
 	{
-		JOptionPane.showMessageDialog(null, "Pessoa n�o exclu�da!!!", "Erro",JOptionPane.ERROR_MESSAGE);
+		JOptionPane.showMessageDialog(null, "Socio nao excluido!!!", "Erro",JOptionPane.ERROR_MESSAGE);
 	}		
     }//GEN-LAST:event_btExcluirActionPerformed
 
