@@ -31,13 +31,13 @@ public class atualizarCadastro extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         alteraNome = new javax.swing.JTextField();
-        alteraCpf = new javax.swing.JTextField();
-        alteraData = new javax.swing.JTextField();
-        alteraTelefone = new javax.swing.JTextField();
         alteraEmail = new javax.swing.JTextField();
         alteraEndereço = new javax.swing.JTextField();
         alteraCidade = new javax.swing.JTextField();
-        alteraCep = new javax.swing.JTextField();
+        alteraCpf = new javax.swing.JFormattedTextField();
+        alteraData = new javax.swing.JFormattedTextField();
+        alteraTelefone = new javax.swing.JFormattedTextField();
+        alteraCep = new javax.swing.JFormattedTextField();
         jLabel1 = new javax.swing.JLabel();
         btAtualizar = new javax.swing.JButton();
         btConsultar = new javax.swing.JButton();
@@ -49,27 +49,6 @@ public class atualizarCadastro extends javax.swing.JFrame {
 
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
         jPanel1.add(alteraNome, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 130, 320, -1));
-
-        alteraCpf.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                alteraCpfKeyPressed(evt);
-            }
-        });
-        jPanel1.add(alteraCpf, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 90, 270, -1));
-
-        alteraData.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                alteraDataKeyPressed(evt);
-            }
-        });
-        jPanel1.add(alteraData, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 170, 130, -1));
-
-        alteraTelefone.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                alteraTelefoneKeyPressed(evt);
-            }
-        });
-        jPanel1.add(alteraTelefone, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 170, 230, -1));
 
         alteraEmail.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -86,12 +65,33 @@ public class atualizarCadastro extends javax.swing.JFrame {
         jPanel1.add(alteraEndereço, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 250, 250, -1));
         jPanel1.add(alteraCidade, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 290, 190, -1));
 
-        alteraCep.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                alteraCepKeyPressed(evt);
-            }
-        });
-        jPanel1.add(alteraCep, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 290, 110, -1));
+        try {
+            alteraCpf.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("###.###.###-##")));
+        } catch (java.text.ParseException ex) {
+            ex.printStackTrace();
+        }
+        jPanel1.add(alteraCpf, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 90, 250, -1));
+
+        try {
+            alteraData.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("##/##/####")));
+        } catch (java.text.ParseException ex) {
+            ex.printStackTrace();
+        }
+        jPanel1.add(alteraData, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 170, 130, -1));
+
+        try {
+            alteraTelefone.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("(##) #####-####")));
+        } catch (java.text.ParseException ex) {
+            ex.printStackTrace();
+        }
+        jPanel1.add(alteraTelefone, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 170, 150, -1));
+
+        try {
+            alteraCep.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("##.###-###")));
+        } catch (java.text.ParseException ex) {
+            ex.printStackTrace();
+        }
+        jPanel1.add(alteraCep, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 290, 90, -1));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/AtualizarCadastro.png"))); // NOI18N
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-40, 0, 830, 400));
@@ -254,50 +254,6 @@ public class atualizarCadastro extends javax.swing.JFrame {
       atualizarCadastro.this.dispose(); 
     }//GEN-LAST:event_btFecharActionPerformed
 
-    private void alteraCpfKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_alteraCpfKeyPressed
-            String numFornecido = alteraCpf.getText();
-
-    int quantCaracteres = numFornecido.length();
-    if (quantCaracteres > 10){
-    numFornecido = numFornecido.substring (0, numFornecido.length() - 1);
-    alteraCpf.setText(numFornecido);
-
-   }
-    }//GEN-LAST:event_alteraCpfKeyPressed
-
-    private void alteraDataKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_alteraDataKeyPressed
-            String numFornecido = alteraData.getText();
-
-    int quantCaracteres = numFornecido.length();
-    if (quantCaracteres > 7){
-    numFornecido = numFornecido.substring (0, numFornecido.length() - 1);
-    alteraData.setText(numFornecido);
-
-   }
-    }//GEN-LAST:event_alteraDataKeyPressed
-
-    private void alteraTelefoneKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_alteraTelefoneKeyPressed
-       String numFornecido = alteraTelefone.getText();
-
-    int quantCaracteres = numFornecido.length();
-    if (quantCaracteres > 10){
-    numFornecido = numFornecido.substring (0, numFornecido.length() - 1);
-    alteraTelefone.setText(numFornecido);
-
-   }
-    }//GEN-LAST:event_alteraTelefoneKeyPressed
-
-    private void alteraCepKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_alteraCepKeyPressed
-        String numFornecido = alteraCep.getText();
-
-    int quantCaracteres = numFornecido.length();
-    if (quantCaracteres > 7){
-    numFornecido = numFornecido.substring (0, numFornecido.length() - 1);
-    alteraCep.setText(numFornecido);
-
-   }
-    }//GEN-LAST:event_alteraCepKeyPressed
-
     /**
      * @param args the command line arguments
      */
@@ -335,14 +291,14 @@ public class atualizarCadastro extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JTextField alteraCep;
+    private javax.swing.JFormattedTextField alteraCep;
     private javax.swing.JTextField alteraCidade;
-    private javax.swing.JTextField alteraCpf;
-    private javax.swing.JTextField alteraData;
+    private javax.swing.JFormattedTextField alteraCpf;
+    private javax.swing.JFormattedTextField alteraData;
     private javax.swing.JTextField alteraEmail;
     private javax.swing.JTextField alteraEndereço;
     private javax.swing.JTextField alteraNome;
-    private javax.swing.JTextField alteraTelefone;
+    private javax.swing.JFormattedTextField alteraTelefone;
     private javax.swing.JButton btAtualizar;
     private javax.swing.JButton btConsultar;
     private javax.swing.JButton btFechar;

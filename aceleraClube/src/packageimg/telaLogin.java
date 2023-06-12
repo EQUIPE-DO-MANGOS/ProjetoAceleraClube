@@ -64,12 +64,17 @@ public class telaLogin extends javax.swing.JFrame {
         btConectar.setBackground(new java.awt.Color(102, 255, 153));
         btConectar.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         btConectar.setContentAreaFilled(false);
+        btConectar.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                btConectarFocusGained(evt);
+            }
+        });
         btConectar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btConectarActionPerformed(evt);
             }
         });
-        jPanel1.add(btConectar, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 260, 130, 30));
+        jPanel1.add(btConectar, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 260, 140, 30));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -126,6 +131,10 @@ public class telaLogin extends javax.swing.JFrame {
     private void senhaUsuarioFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_senhaUsuarioFocusGained
      senhaUsuario.setText("");
     }//GEN-LAST:event_senhaUsuarioFocusGained
+
+    private void btConectarFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_btConectarFocusGained
+        getRootPane().setDefaultButton(btConectar);
+    }//GEN-LAST:event_btConectarFocusGained
 
     /**
      * @param args the command line arguments

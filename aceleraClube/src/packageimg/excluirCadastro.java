@@ -24,7 +24,7 @@ public class excluirCadastro extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        cpfExcluir = new javax.swing.JTextField();
+        cpfExcluir = new javax.swing.JFormattedTextField();
         jLabel1 = new javax.swing.JLabel();
         btExcluir = new javax.swing.JButton();
         btVoltar = new javax.swing.JButton();
@@ -35,17 +35,12 @@ public class excluirCadastro extends javax.swing.JFrame {
 
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        cpfExcluir.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cpfExcluirActionPerformed(evt);
-            }
-        });
-        cpfExcluir.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                cpfExcluirKeyPressed(evt);
-            }
-        });
-        jPanel1.add(cpfExcluir, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 190, 240, 30));
+        try {
+            cpfExcluir.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("###.###.###-##")));
+        } catch (java.text.ParseException ex) {
+            ex.printStackTrace();
+        }
+        jPanel1.add(cpfExcluir, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 200, 230, 30));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/Excluir Cadastro_1.png"))); // NOI18N
         jLabel1.setText("jLabel1");
@@ -89,10 +84,6 @@ public class excluirCadastro extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void cpfExcluirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cpfExcluirActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_cpfExcluirActionPerformed
-
     private void btVoltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btVoltarActionPerformed
         new telaMenu().show();
         dispose();
@@ -121,17 +112,6 @@ public class excluirCadastro extends javax.swing.JFrame {
     private void btFecharActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btFecharActionPerformed
     excluirCadastro.this.dispose(); 
     }//GEN-LAST:event_btFecharActionPerformed
-
-    private void cpfExcluirKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_cpfExcluirKeyPressed
-               String numFornecido = cpfExcluir.getText();
-
-    int quantCaracteres = numFornecido.length();
-    if (quantCaracteres > 10){
-    numFornecido = numFornecido.substring (0, numFornecido.length() - 1);
-    cpfExcluir.setText(numFornecido);
-
-   }
-    }//GEN-LAST:event_cpfExcluirKeyPressed
 
     /**
      * @param args the command line arguments
@@ -172,7 +152,7 @@ public class excluirCadastro extends javax.swing.JFrame {
     private javax.swing.JButton btExcluir;
     private javax.swing.JButton btFechar;
     private javax.swing.JButton btVoltar;
-    private javax.swing.JTextField cpfExcluir;
+    private javax.swing.JFormattedTextField cpfExcluir;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables

@@ -25,14 +25,14 @@ public class informaçaoCadastro extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        consultaCpf = new javax.swing.JFormattedTextField();
         consultaCidade = new javax.swing.JTextField();
         consultaEndereço = new javax.swing.JTextField();
         consultaEmail = new javax.swing.JTextField();
-        consultaCep = new javax.swing.JTextField();
-        consultaTelefone = new javax.swing.JTextField();
-        consultaData = new javax.swing.JTextField();
         consultaNome = new javax.swing.JTextField();
-        consultaCpf = new javax.swing.JTextField();
+        consultaCep = new javax.swing.JFormattedTextField();
+        consultaTelefone = new javax.swing.JFormattedTextField();
+        consultaData = new javax.swing.JFormattedTextField();
         jLabel2 = new javax.swing.JLabel();
         btConsultar = new javax.swing.JButton();
         btVoltar = new javax.swing.JButton();
@@ -41,6 +41,13 @@ public class informaçaoCadastro extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        try {
+            consultaCpf.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("###.###.###-##")));
+        } catch (java.text.ParseException ex) {
+            ex.printStackTrace();
+        }
+        getContentPane().add(consultaCpf, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 90, 250, -1));
 
         consultaCidade.setEditable(false);
         getContentPane().add(consultaCidade, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 290, 190, -1));
@@ -61,24 +68,32 @@ public class informaçaoCadastro extends javax.swing.JFrame {
         });
         getContentPane().add(consultaEmail, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 210, 290, -1));
 
-        consultaCep.setEditable(false);
-        getContentPane().add(consultaCep, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 290, 110, -1));
-
-        consultaTelefone.setEditable(false);
-        getContentPane().add(consultaTelefone, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 170, 230, -1));
-
-        consultaData.setEditable(false);
-        getContentPane().add(consultaData, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 170, 130, -1));
-
         consultaNome.setEditable(false);
         getContentPane().add(consultaNome, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 130, 320, -1));
 
-        consultaCpf.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                consultaCpfKeyPressed(evt);
-            }
-        });
-        getContentPane().add(consultaCpf, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 90, 270, -1));
+        consultaCep.setEditable(false);
+        try {
+            consultaCep.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("##.###-###")));
+        } catch (java.text.ParseException ex) {
+            ex.printStackTrace();
+        }
+        getContentPane().add(consultaCep, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 290, 90, -1));
+
+        consultaTelefone.setEditable(false);
+        try {
+            consultaTelefone.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("(##) #####-####")));
+        } catch (java.text.ParseException ex) {
+            ex.printStackTrace();
+        }
+        getContentPane().add(consultaTelefone, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 170, 150, -1));
+
+        consultaData.setEditable(false);
+        try {
+            consultaData.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("##/##/####")));
+        } catch (java.text.ParseException ex) {
+            ex.printStackTrace();
+        }
+        getContentPane().add(consultaData, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 170, 130, -1));
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/Informações.png"))); // NOI18N
         jLabel2.setText("jLabel2");
@@ -181,17 +196,6 @@ public class informaçaoCadastro extends javax.swing.JFrame {
        informaçaoCadastro.this.dispose(); 
     }//GEN-LAST:event_btFecharActionPerformed
 
-    private void consultaCpfKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_consultaCpfKeyPressed
-        String numFornecido = consultaCpf.getText();
-
-    int quantCaracteres = numFornecido.length();
-    if (quantCaracteres > 10){
-    numFornecido = numFornecido.substring (0, numFornecido.length() - 1);
-    consultaCpf.setText(numFornecido);
-
-   }
-    }//GEN-LAST:event_consultaCpfKeyPressed
-
     /**
      * @param args the command line arguments
      */
@@ -231,14 +235,14 @@ public class informaçaoCadastro extends javax.swing.JFrame {
     private javax.swing.JButton btConsultar;
     private javax.swing.JButton btFechar;
     private javax.swing.JButton btVoltar;
-    private javax.swing.JTextField consultaCep;
+    private javax.swing.JFormattedTextField consultaCep;
     private javax.swing.JTextField consultaCidade;
-    private javax.swing.JTextField consultaCpf;
-    private javax.swing.JTextField consultaData;
+    private javax.swing.JFormattedTextField consultaCpf;
+    private javax.swing.JFormattedTextField consultaData;
     private javax.swing.JTextField consultaEmail;
     private javax.swing.JTextField consultaEndereço;
     private javax.swing.JTextField consultaNome;
-    private javax.swing.JTextField consultaTelefone;
+    private javax.swing.JFormattedTextField consultaTelefone;
     private javax.swing.JLabel jLabel2;
     // End of variables declaration//GEN-END:variables
 }

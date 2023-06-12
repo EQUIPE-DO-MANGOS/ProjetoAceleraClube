@@ -27,13 +27,13 @@ public class telaCadastro extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         campoNome = new javax.swing.JTextField();
-        campoCPF = new javax.swing.JTextField();
-        campoData = new javax.swing.JTextField();
-        campoTelefone = new javax.swing.JTextField();
         campoEmail = new javax.swing.JTextField();
         campoEndereço = new javax.swing.JTextField();
         campoCidade = new javax.swing.JTextField();
-        campoCep = new javax.swing.JTextField();
+        campoCpf = new javax.swing.JFormattedTextField();
+        campoTelefone = new javax.swing.JFormattedTextField();
+        campoData = new javax.swing.JFormattedTextField();
+        campoCep = new javax.swing.JFormattedTextField();
         jLabel1 = new javax.swing.JLabel();
         btVoltar = new javax.swing.JButton();
         btProsseguir = new javax.swing.JButton();
@@ -50,42 +50,37 @@ public class telaCadastro extends javax.swing.JFrame {
             }
         });
         jPanel1.add(campoNome, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 130, 310, -1));
-
-        campoCPF.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                campoCPFActionPerformed(evt);
-            }
-        });
-        campoCPF.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                campoCPFKeyPressed(evt);
-            }
-        });
-        jPanel1.add(campoCPF, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 90, 310, -1));
-
-        campoData.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                campoDataKeyPressed(evt);
-            }
-        });
-        jPanel1.add(campoData, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 170, 130, -1));
-
-        campoTelefone.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                campoTelefoneKeyPressed(evt);
-            }
-        });
-        jPanel1.add(campoTelefone, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 170, 170, -1));
         jPanel1.add(campoEmail, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 210, 310, -1));
         jPanel1.add(campoEndereço, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 250, 310, -1));
         jPanel1.add(campoCidade, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 290, 190, -1));
 
-        campoCep.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                campoCepKeyPressed(evt);
-            }
-        });
-        jPanel1.add(campoCep, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 290, 100, -1));
+        try {
+            campoCpf.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("###.###.###-##")));
+        } catch (java.text.ParseException ex) {
+            ex.printStackTrace();
+        }
+        jPanel1.add(campoCpf, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 90, 300, -1));
+
+        try {
+            campoTelefone.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("(##) #####-####")));
+        } catch (java.text.ParseException ex) {
+            ex.printStackTrace();
+        }
+        jPanel1.add(campoTelefone, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 170, 150, -1));
+
+        try {
+            campoData.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("##/##/####")));
+        } catch (java.text.ParseException ex) {
+            ex.printStackTrace();
+        }
+        jPanel1.add(campoData, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 170, 130, -1));
+
+        try {
+            campoCep.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("##.###-###")));
+        } catch (java.text.ParseException ex) {
+            ex.printStackTrace();
+        }
+        jPanel1.add(campoCep, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 290, 90, -1));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/Cadastro.png"))); // NOI18N
         jLabel1.setText("jLabel1");
@@ -140,7 +135,7 @@ public class telaCadastro extends javax.swing.JFrame {
 	Endereco = campoEndereço.getText();
 	Telefone = campoTelefone.getText();
 	Email = campoEmail.getText();
-        CPF = campoCPF.getText();
+        CPF = campoCpf.getText();
         CEP = campoCep.getText();
         Nascimento = campoData.getText();
         Cidade = campoCidade.getText();
@@ -170,10 +165,6 @@ public class telaCadastro extends javax.swing.JFrame {
         dispose();
     }//GEN-LAST:event_btVoltarActionPerformed
 
-    private void campoCPFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_campoCPFActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_campoCPFActionPerformed
-
     private void campoNomeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_campoNomeActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_campoNomeActionPerformed
@@ -181,52 +172,7 @@ public class telaCadastro extends javax.swing.JFrame {
     private void btFecharActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btFecharActionPerformed
       telaCadastro.this.dispose(); 
     }//GEN-LAST:event_btFecharActionPerformed
-
-    private void campoCPFKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_campoCPFKeyPressed
-        String numFornecido = campoCPF.getText();
-
-    int quantCaracteres = numFornecido.length();
-    if (quantCaracteres > 10){
-    numFornecido = numFornecido.substring (0, numFornecido.length() - 1);
-    campoCPF.setText(numFornecido);
-
-   }
-    }//GEN-LAST:event_campoCPFKeyPressed
-
-    private void campoDataKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_campoDataKeyPressed
-          String numFornecido = campoData.getText();
-
-    int quantCaracteres = numFornecido.length();
-    if (quantCaracteres > 7){
-    numFornecido = numFornecido.substring (0, numFornecido.length() - 1);
-    campoData.setText(numFornecido);
-
-   }
-    }//GEN-LAST:event_campoDataKeyPressed
-
-    private void campoTelefoneKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_campoTelefoneKeyPressed
-    String numFornecido = campoTelefone.getText();
-
-    int quantCaracteres = numFornecido.length();
-    if (quantCaracteres > 10){
-    numFornecido = numFornecido.substring (0, numFornecido.length() - 1);
-    campoTelefone.setText(numFornecido);
-
-   }
-    }//GEN-LAST:event_campoTelefoneKeyPressed
-
-    private void campoCepKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_campoCepKeyPressed
-    String numFornecido = campoCep.getText();
-
-    int quantCaracteres = numFornecido.length();
-    if (quantCaracteres > 7){
-    numFornecido = numFornecido.substring (0, numFornecido.length() - 1);
-    campoCep.setText(numFornecido);
-
-   }
-    }//GEN-LAST:event_campoCepKeyPressed
-
-    /**
+  /**
      * @param args the command line arguments
      */
     public static void main(String args[]) {
@@ -265,14 +211,14 @@ public class telaCadastro extends javax.swing.JFrame {
     private javax.swing.JButton btFechar;
     private javax.swing.JButton btProsseguir;
     private javax.swing.JButton btVoltar;
-    private javax.swing.JTextField campoCPF;
-    private javax.swing.JTextField campoCep;
+    private javax.swing.JFormattedTextField campoCep;
     private javax.swing.JTextField campoCidade;
-    private javax.swing.JTextField campoData;
+    private javax.swing.JFormattedTextField campoCpf;
+    private javax.swing.JFormattedTextField campoData;
     private javax.swing.JTextField campoEmail;
     private javax.swing.JTextField campoEndereço;
     private javax.swing.JTextField campoNome;
-    private javax.swing.JTextField campoTelefone;
+    private javax.swing.JFormattedTextField campoTelefone;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
