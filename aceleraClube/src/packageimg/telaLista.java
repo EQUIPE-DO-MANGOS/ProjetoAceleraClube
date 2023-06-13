@@ -4,16 +4,15 @@
  */
 package packageimg;
 
-/**
- *
- * @author cruze
- */
-public class listaAssociados extends javax.swing.JFrame {
+import javax.swing.JOptionPane;
+import Banco.associadosBanco;
+
+public class telaLista extends javax.swing.JFrame {
 
     /**
      * Creates new form listaAssociados
      */
-    public listaAssociados() {
+    public telaLista() {
         initComponents();
     }
 
@@ -31,6 +30,7 @@ public class listaAssociados extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         btVoltar = new javax.swing.JButton();
         btFechar = new javax.swing.JButton();
+        btLista = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
@@ -59,6 +59,14 @@ public class listaAssociados extends javax.swing.JFrame {
         });
         getContentPane().add(btFechar, new org.netbeans.lib.awtextra.AbsoluteConstraints(745, 10, 50, 40));
 
+        btLista.setText("jButton1");
+        btLista.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btListaActionPerformed(evt);
+            }
+        });
+        getContentPane().add(btLista, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 350, 160, -1));
+
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
@@ -68,8 +76,15 @@ public class listaAssociados extends javax.swing.JFrame {
     }//GEN-LAST:event_btVoltarActionPerformed
 
     private void btFecharActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btFecharActionPerformed
-       listaAssociados.this.dispose(); 
+       telaLista.this.dispose(); 
     }//GEN-LAST:event_btFecharActionPerformed
+
+    private void btListaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btListaActionPerformed
+       associadosBanco associadosbanco = new associadosBanco();
+        String dados = associadosbanco.relatorioPessoas();
+        
+        informaçoesAssociados.setText(dados);
+    }//GEN-LAST:event_btListaActionPerformed
 
     /**
      * @param args the command line arguments
@@ -88,20 +103,21 @@ public class listaAssociados extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(listaAssociados.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(telaLista.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(listaAssociados.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(telaLista.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(listaAssociados.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(telaLista.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(listaAssociados.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(telaLista.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new listaAssociados().setVisible(true);
+                new telaLista().setVisible(true);
             }
         });
     }
@@ -109,6 +125,7 @@ public class listaAssociados extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel Voltar;
     private javax.swing.JButton btFechar;
+    private javax.swing.JButton btLista;
     private javax.swing.JButton btVoltar;
     private javax.swing.JTextField informaçoesAssociados;
     private javax.swing.JLabel jLabel1;

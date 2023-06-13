@@ -1,4 +1,4 @@
-/* package packageimg;
+ package packageimg;
 
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
@@ -31,8 +31,7 @@ public class listaSocios {
            modelo.addColumn("Nascimento");
            modelo.addColumn("Cidade");
 	   
-	   setTitle("Lista dos Associados");
-	   setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+	
            
             try
 	   {
@@ -76,11 +75,24 @@ public class listaSocios {
 		btnConsultar.setFont(new Font("Tahoma", Font.PLAIN, 16));
 		btnConsultar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				dispose();				
+				;				
 			}
 			
 		});
 		btnConsultar.setBounds(36, 401, 124, 23);
 		c.add(btnConsultar);
 	   
-} */
+}
+
+    private Container getContentPane() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+
+    private void setSize(int i, int i0) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+
+    private void setVisible(boolean b) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+}

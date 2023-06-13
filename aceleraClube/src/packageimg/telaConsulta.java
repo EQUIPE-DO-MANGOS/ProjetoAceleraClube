@@ -4,17 +4,16 @@
  */
 package packageimg;
 
-/**
- *
- * @author cruze
- */
+
 public class telaConsulta extends javax.swing.JFrame {
 
     private informaçaoCadastro consultar;
+    private telaLista lista;
     
     public telaConsulta() {
         initComponents();
         consultar = new informaçaoCadastro();
+        lista = new telaLista();
     }
 
     /**
@@ -101,8 +100,7 @@ public class telaConsulta extends javax.swing.JFrame {
     }//GEN-LAST:event_btVoltarActionPerformed
 
     private void btListaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btListaActionPerformed
-        new listaAssociados().show();
-        dispose();
+     lista.setVisible(true);
     }//GEN-LAST:event_btListaActionPerformed
 
     private void btConsultarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btConsultarActionPerformed
