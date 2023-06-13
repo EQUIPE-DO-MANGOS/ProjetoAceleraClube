@@ -82,9 +82,9 @@ public class telaCadastro extends javax.swing.JFrame {
         }
         jPanel1.add(campoCep, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 290, 90, -1));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/Cadastro.png"))); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/Cadastrar.png"))); // NOI18N
         jLabel1.setText("jLabel1");
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-40, 0, 830, 400));
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-40, -10, 860, 420));
 
         btVoltar.setText("jButton2");
         btVoltar.addActionListener(new java.awt.event.ActionListener() {

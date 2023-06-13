@@ -26,11 +26,11 @@ public class telaLista extends javax.swing.JFrame {
     private void initComponents() {
 
         Voltar = new javax.swing.JLabel();
+        btLista = new javax.swing.JButton();
         informaçoesAssociados = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
         btVoltar = new javax.swing.JButton();
         btFechar = new javax.swing.JButton();
-        btLista = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
@@ -38,6 +38,16 @@ public class telaLista extends javax.swing.JFrame {
 
         Voltar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/Voltar.png"))); // NOI18N
         getContentPane().add(Voltar, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 340, -1, -1));
+
+        btLista.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/btGerarlista (1).png"))); // NOI18N
+        btLista.setText("jButton1");
+        btLista.setContentAreaFilled(false);
+        btLista.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btListaActionPerformed(evt);
+            }
+        });
+        getContentPane().add(btLista, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 350, 160, -1));
         getContentPane().add(informaçoesAssociados, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 90, 480, 240));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/ListaAssociados.png"))); // NOI18N
@@ -58,14 +68,6 @@ public class telaLista extends javax.swing.JFrame {
             }
         });
         getContentPane().add(btFechar, new org.netbeans.lib.awtextra.AbsoluteConstraints(745, 10, 50, 40));
-
-        btLista.setText("jButton1");
-        btLista.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btListaActionPerformed(evt);
-            }
-        });
-        getContentPane().add(btLista, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 350, 160, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents

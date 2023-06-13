@@ -105,7 +105,7 @@ public class excluirCadastro extends javax.swing.JFrame {
 	}
 	else
 	{
-		JOptionPane.showMessageDialog(null, "Socio nao excluido!!!", "Erro",JOptionPane.ERROR_MESSAGE);
+		JOptionPane.showMessageDialog(null, "CPF nao encontrado!", "Erro",JOptionPane.ERROR_MESSAGE);
 	}		
     }//GEN-LAST:event_btExcluirActionPerformed
 
