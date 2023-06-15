@@ -27,7 +27,8 @@ public class telaLista extends javax.swing.JFrame {
 
         Voltar = new javax.swing.JLabel();
         btLista = new javax.swing.JButton();
-        informaçoesAssociados = new javax.swing.JTextField();
+        area = new javax.swing.JScrollPane();
+        areaLista = new javax.swing.JTextArea();
         jLabel1 = new javax.swing.JLabel();
         btVoltar = new javax.swing.JButton();
         btFechar = new javax.swing.JButton();
@@ -48,7 +49,12 @@ public class telaLista extends javax.swing.JFrame {
             }
         });
         getContentPane().add(btLista, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 350, 160, -1));
-        getContentPane().add(informaçoesAssociados, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 90, 480, 240));
+
+        areaLista.setColumns(20);
+        areaLista.setRows(5);
+        area.setViewportView(areaLista);
+
+        getContentPane().add(area, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 80, 520, 250));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/ListaAssociados.png"))); // NOI18N
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-40, 0, 830, 400));
@@ -85,7 +91,7 @@ public class telaLista extends javax.swing.JFrame {
        associadosBanco associadosbanco = new associadosBanco();
         String dados = associadosbanco.relatorioPessoas();
         
-        informaçoesAssociados.setText(dados);
+        areaLista.setText(dados);
     }//GEN-LAST:event_btListaActionPerformed
 
     /**
@@ -126,10 +132,11 @@ public class telaLista extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel Voltar;
+    private javax.swing.JScrollPane area;
+    private javax.swing.JTextArea areaLista;
     private javax.swing.JButton btFechar;
     private javax.swing.JButton btLista;
     private javax.swing.JButton btVoltar;
-    private javax.swing.JTextField informaçoesAssociados;
     private javax.swing.JLabel jLabel1;
     // End of variables declaration//GEN-END:variables
 }

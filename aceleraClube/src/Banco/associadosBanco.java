@@ -28,8 +28,8 @@ public class associadosBanco {
             stmt = connection.createStatement();
 
             String sql = "INSERT INTO associados(Nome,Endereco,Telefone,Email,CPF,CEP,Nascimento,Cidade) "
-            		   + "VALUES ('"+ associados.getNome() + "','" + associados.getEndereco() + "', '" 
-            		   + associados.getTelefone() + "', '" + associados.getEmail() + "','" + associados.getCPF() + "','" + associados.getCEP() + "','" + associados.getNascimento() + "','" + associados.getCidade() + "')";
+            		   + "VALUES ('"+ associados.getNome() + "\n','" + associados.getEndereco() + "', '" 
+            		   + associados.getTelefone() + "', '\n" + associados.getEmail() + "','" + associados.getCPF() + "','" + associados.getCEP() + "','" + associados.getNascimento() + "','" + associados.getCidade() + "')";
             System.out.println("SQL: " + sql);
             stmt.executeUpdate(sql);
            
