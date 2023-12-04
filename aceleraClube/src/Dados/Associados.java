@@ -1,8 +1,11 @@
 package Dados;
 
-
-public class Associados
-{
+/**
+ * Classe que representa um associado com informações pessoais.
+ *
+ * @author Lucas
+ */
+public class Associados {
     private String Nome;
     private String Endereco;
     private String Telefone;
@@ -11,112 +14,188 @@ public class Associados
     private String CEP;
     private String Nascimento;
     private String Cidade;
-    
-    
 
-    public Associados() 
-    {
-        this.Nome=null;
-        this.Endereco=null;
-        this.Telefone=null;
-        this.Email=null; 
-        this.CPF=null;
-        this.CEP=null;
-        this.Nascimento=null;
-        this.Cidade=null;
+    /**
+     * Construtor padrão que inicializa todos os campos como nulos.
+     */
+    public Associados() {
+        this.Nome = null;
+        this.Endereco = null;
+        this.Telefone = null;
+        this.Email = null;
+        this.CPF = null;
+        this.CEP = null;
+        this.Nascimento = null;
+        this.Cidade = null;
     }
 
-    public Associados(String Nome, String Endereco, String Telefone, String Email, String CPF, String CEP, String Nascimento, String Cidade)
-    {
+    /**
+     * Construtor que recebe informações do associado.
+     *
+     * @param Nome       Nome do associado.
+     * @param Endereco   Endereço do associado.
+     * @param Telefone   Número de telefone do associado.
+     * @param Email      Endereço de e-mail do associado.
+     * @param CPF        Número do CPF do associado.
+     * @param CEP        Código de Endereçamento Postal do associado.
+     * @param Nascimento Data de nascimento do associado.
+     * @param Cidade     Cidade do associado.
+     */
+    public Associados(String Nome, String Endereco, String Telefone, String Email, String CPF, String CEP,
+                      String Nascimento, String Cidade) {
         this.Nome = Nome;
         this.Endereco = Endereco;
         this.Telefone = Telefone;
         this.Email = Email;
-        this.CPF= CPF;
-        this.CEP= CEP;
-        this.Nascimento= Nascimento;
-        this.Cidade= Cidade;
+        this.CPF = CPF;
+        this.CEP = CEP;
+        this.Nascimento = Nascimento;
+        this.Cidade = Cidade;
     }
 
-    public String getNome()
-    {
+    // Métodos de acesso (getters e setters) para os atributos da classe
+
+    /**
+     * Obtém o nome do associado.
+     *
+     * @return O nome do associado.
+     */
+    public String getNome() {
         return Nome;
     }
 
-    public void setNome(String Nome)
-    {
+    /**
+     * Define o nome do associado.
+     *
+     * @param Nome O nome do associado.
+     */
+    public void setNome(String Nome) {
         this.Nome = Nome;
     }
 
-    public String getEndereco()
-    {
+    /**
+     * Obtém o endereço do associado.
+     *
+     * @return O endereço do associado.
+     */
+    public String getEndereco() {
         return Endereco;
     }
-    
-    public void setEndereco(String Endereco)
-    {
+
+    /**
+     * Define o endereço do associado.
+     *
+     * @param Endereco O endereço do associado.
+     */
+    public void setEndereco(String Endereco) {
         this.Endereco = Endereco;
     }
-    
-    public String getTelefone()
-    {
+
+    /**
+     * Obtém o número de telefone do associado.
+     *
+     * @return O número de telefone do associado.
+     */
+    public String getTelefone() {
         return Telefone;
     }
 
-    public void setTelefone(String Telefone)
-    {
+    /**
+     * Define o número de telefone do associado.
+     *
+     * @param Telefone O número de telefone do associado.
+     */
+    public void setTelefone(String Telefone) {
         this.Telefone = Telefone;
-    } 
-    
-    
-    public String getEmail()
-    {
+    }
+
+    /**
+     * Obtém o endereço de e-mail do associado.
+     *
+     * @return O endereço de e-mail do associado.
+     */
+    public String getEmail() {
         return Email;
     }
 
-    public void setEmail(String Email)
-    {
+    /**
+     * Define o endereço de e-mail do associado.
+     *
+     * @param Email O endereço de e-mail do associado.
+     */
+    public void setEmail(String Email) {
         this.Email = Email;
-    } 
-    
-     public String getCPF()
-    {
+    }
+
+    /**
+     * Obtém o número do CPF do associado.
+     *
+     * @return O número do CPF do associado.
+     */
+    public String getCPF() {
         return CPF;
     }
 
-    public void setCPF(String CPF)
-    {
+    /**
+     * Define o número do CPF do associado.
+     *
+     * @param CPF O número do CPF do associado.
+     */
+    public void setCPF(String CPF) {
         this.CPF = CPF;
-    } 
-    
-    public String getCEP()
-    {
+    }
+
+    /**
+     * Obtém o CEP do associado.
+     *
+     * @return O CEP do associado.
+     */
+    public String getCEP() {
         return CEP;
     }
 
-    public void setCEP(String CEP)
-    {
+    /**
+     * Define o CEP do associado.
+     *
+     * @param CEP O CEP do associado.
+     */
+    public void setCEP(String CEP) {
         this.CEP = CEP;
-    } 
-    
-    public String getNascimento()
-    {
+    }
+
+    /**
+     * Obtém a data de nascimento do associado.
+     *
+     * @return A data de nascimento do associado.
+     */
+    public String getNascimento() {
         return Nascimento;
     }
 
-    public void setNascimento(String Nascimento)
-    {
+    /**
+     * Define a data de nascimento do associado.
+     *
+     * @param Nascimento A data de nascimento do associado.
+     */
+    public void setNascimento(String Nascimento) {
         this.Nascimento = Nascimento;
-    } 
-    
-    public String getCidade()
-    {
+    }
+
+    /**
+     * Obtém a cidade do associado.
+     *
+     * @return A cidade do associado.
+     */
+    public String getCidade() {
         return Cidade;
     }
 
-    public void setCidade(String Cidade)
-    {
+    /**
+     * Define a cidade do associado.
+     *
+     * @param Cidade A cidade do associado.
+     */
+    public void setCidade(String Cidade) {
         this.Cidade = Cidade;
-    } 
+    }
 }
-
